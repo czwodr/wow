@@ -1,0 +1,19 @@
+<view class="mian">
+  <view class="creation flex_vert" bindtap="skip" data-id="{{id}}">
+    <image src="../../images/jia.png" class="jia"></image>
+    新建模板
+  </view>
+  <view class="list" wx:if="{{list.length>0}}">
+    <view class="item" wx:for="{{list}}" wx:key="index" bindtap="skip" data-id="{{item.id}}">
+      <view class="subsidy_template">
+        <text>{{item.subsidy_template.transcript_name?item.subsidy_template.transcript_name:'模板'}}</text>
+        <text>{{item.subsidy_template.camp_name?item.subsidy_template.camp_name:''}}</text>
+        <text>{{item.subsidy_template.subsidy.currency_type?(item.subsidy_template.subsidy.currency_type==2?'现金补贴团':'金币补贴团'):''}}</text>
+      </view>
+      <view style="padding-top:20rpx;">创建时间：{{item.create_time}}</view>
+    </view>
+  </view>
+  <view wx:else class="flex_vert">
+    暂无模板
+  </view>
+</view>

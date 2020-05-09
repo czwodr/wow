@@ -1,0 +1,76 @@
+<view class="main" style="padding-bottom:120rpx;">
+  <view class="unit"></view>
+  <view class="room_introductory">
+    <view class="flex_sb flex_y room_code">
+      <view style="  font-size:28rpx;font-weight: bold;">房间码：{{room_message.room_num}}</view>
+      <view style="  font-size:26rpx;'">
+        <view wx:if="{{countDown}}" style="text-align: right;">
+          <view>{{min}}:{{sec}}后结束</view>
+          <view style="fony-size:20rpx;color:red;">若不操作时间结束默认同意</view>
+        </view>
+        <view wx:else>{{endTime}}</view>
+      </view>
+    </view>
+    <view class="flex_sb flex_y room_content">
+      <image src="{{room_message.avatar}}"></image>
+      <view class="flex-grow-1">
+        <view class="flex_sb flex_y">
+          <view>
+            <text style="font-size:30rpx;margin-right:10rpx;font-weight: bold;">{{room_message.user_role_name}}</text>
+            <text class="tag">团长</text>
+          </view>
+          <view style="font-size:24rpx;">阵营-服务器：
+            <text style="color:{{room_message.camp_id == 1 ? '#4269E2' : '#DD021E'}};">{{room_message.camp_name}}</text>-{{room_message.service_name}}</view>
+        </view>
+        <view class="flex_sb" style="padding-top:20rpx;">
+          <view style="font-size:26rpx;">副本：{{room_message.transcript_name}}</view>
+          <view style="font-size:24rpx;">
+            <text class="tag" style="margin-right:10rpx;">{{allot.length}}人团</text>
+            <text>{{voteDate.disagreeNum}}人反对/</text>
+            <text>{{voteDate.agreeNum}}人同意</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="lose" style="text-align:center;font-size:20rpx;color:red;">全团百分之七十五同意则分账成功</view>
+  <view class="allot_list">
+    <view class="allot_item" wx:for="{{allot}}" wx:key="index">
+      <view class="title">{{item.userInfo.user_role_name}}</view>
+      <view class="allot_content flex_sb flex_y">
+        <image class="allot_img" src="{{item.userInfo.avatar}}"></image>
+        <view class="allot_detail flex-grow-1">
+          <view class="flex_sb">
+            <view>+{{item.money}}￥</view>
+            <view>
+              <view wx:if="{{item.vote_status && item.vote_status == 1}}">已同意</view>
+              <view wx:elif="{{!item.vote_status }}">
+                <text wx:if="{{new_status != 2}}">考虑中</text>
+              </view>
+            </view>
+          </view>
+          <view class="flex_sb" style="padding-top:20rpx;">
+            <view> +{{item.goldGoin}}金币</view>
+            <view wx:if="{{item.vote_status && item.vote_status == 2}}">不同意</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="base" wx:if="{{show_vote}}">
+  <view class="" wx:if="{{allot_info.status == 2 || allot_info.status == 3 || new_status == 3 || new_status == 2}}">
+    <view wx:if="{{allot_info.status == 2 || new_status == 2}}" class="sure_btn btn1" bindtap="skip" data-url="/pages/account/account">分账成功</view>
+    <view wx:if="{{allot_info.status == 3 || new_status == 3}}" class="sure_btn btn2">
+      <view wx:if="{{identity == 1}}" bindtap="anew">分账失败，点击重新分账</view>
+      <view wx:else>分账失败，请等团长从新分账</view>
+    </view>
+  </view>
+  <view wx:else>
+    <view wx:if="{{allot[0].vote_status}}" class="sure_btn hint">您已投过票，正在统计中</view>
+    <view class="sure_btn flex_sb" wx:else>
+      <view class="btn1 flex-grow-1" bindtap="save_select" data-status="2">不同意</view>
+      <view class="btn2 flex-grow-1" bindtap="save_select" data-status="1">同意</view>
+    </view>
+  </view>
+</view>

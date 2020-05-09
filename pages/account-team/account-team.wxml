@@ -1,0 +1,35 @@
+<view class='nav'>
+  <navBar title='团账单' background='#FFF0CD' back="{{true}}" bindback="handlerGobackClick"></navBar>
+</view>
+<view class="content">
+  <view class="list" wx:if="{{account_list.length > 0}}">
+    <view class="item" wx:for="{{account_list}}" wx:key="index" bindtap="skip" data-url="/pages/account-team-detail/account-team-detail?team_id={{item.team_id}}" data-index="{{index}}">
+      <view class="room flex_sb" style="border-bottm:1rpx solid #a5a5a5;">
+        <text>房间码：{{item.room_num}}</text>
+        <text>{{item.distributionInfo==0&&item.isdel!=2?'进行中':item.distributionInfo==1&&item.isdel!=2?'分账中':'已结束'}}</text>
+      </view>
+      <view class="team_content flex_y flex_sb">
+        <view class="" style="text-align: center;">
+          <image src="{{item.avatar}}"></image>
+        </view>
+        <view class="unity flex-grow-1">
+          <view class="flex_sb">
+            <view style="font-size: 30rpx;">{{item.user_role_name}}</view>
+            <view>阵营-服务器：
+              <text style="color:{{item.camp_id == 1 ? '#4269E2' : '#DD021E'}};">{{item.camp_name}}</text>-{{item.service_name}}</view>
+          </view>
+          <view style="padding-top:20rpx;" class="flex_sb">
+            <view>副本：{{item.transcript_name}}</view>
+            <view>{{item.create_time}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="btn_box" wx:if="{{item.distributionInfo==1&&item.isdel!=2}}">
+        <view class="btn">进入</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="hint">暂无账单</view>
+  </view>
+</view>

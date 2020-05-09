@@ -1,0 +1,82 @@
+<!-- <view class='nav'>
+  <navBar title='装备详情' background='rgba(0, 0, 0, 0)' color='#fff' back="{{true}}" iconTheme='white' bindback="handlerGobackClick"></navBar>
+</view> -->
+<view class="main">
+  <view class="user_img">
+    <image class="portrait" src="{{user_info.avatar}}" />
+  </view>
+  <view class="block" style=" background: #eee;" />
+  <view class="user_info">
+    <view class="user_name flex_y">
+      <view>
+        <text class="case">昵称</text> {{user_info.nickname}}
+      </view>
+      <view/>
+    </view>
+    <!-- <view class="user_role flex_y">
+      <view class="flex" style="width:100%">
+        <view class="case">性别</view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class="flex-grow-1">
+          <view class="picker">{{array[index]}} </view>
+        </picker>
+      </view>
+      <view/>
+    </view> -->
+    <view class="user_phone flex_y" bindtap="setMobile">
+      <view>
+        <text class="case">手机号码</text>
+        <text>{{mobile.length>0?mobile:"绑定号码"}}</text>
+      </view>
+      <view/>
+    </view>
+  </view>
+  <van-dialog use-slot title="昵称修改" show="{{ nameShow }}" show-cancel-button bind:close="onClose" bind:confirm="onConfirm">
+    <view class="edit_name">
+      <input type="text" placeholder="{{user_info.nickname}}" bindinput="name_input" />
+    </view>
+  </van-dialog>
+  <van-popup show="{{ mobileShow }}" bind:close="popupClose" position="right" custom-style="height: 100%;width:100%" closeable>
+    <view class="mobile">
+      <!--<view class="arrow_left" bindtap="arrow_left">
+				<van-icon name="arrow-left" size="52rpx" color="#363636" />
+			</view>-->
+      <view class="mobile_text" wx:if="{{mobile.length>0}}">
+        <text>原手机号：</text>
+        <text class="mb">{{mobile}}</text>
+      </view>
+      <view class="mobile_input_box">
+        <text class="title">更换的手机号</text>
+
+        <block wx:if="{{!isSubmitCode}}">
+          <view>
+            <input type="number" placeholder="输入需要更换的手机号" bindinput="mobile_input" placeholder-style="color:#BABABA;font-size:28rpx" value="{{mobile_input}}" maxlength="11" />
+          </view>
+        </block>
+        <block wx:else>
+          <view class="codeNum">
+
+            <view class="count_down" style="color:{{!isdownTime?'#3c3c3c':'#bababa'}}" catchtap="getCode">
+              重新发送
+              <van-count-down time="{{ downTime }}" format=" ss 秒" wx:if="{{isdownTime}}" bind:finish="setDownTime" />
+            </view>
+            <input type="number" placeholder="请输入短信验证码" bindinput="code_input" placeholder-style="color:#BABABA;font-size:28rpx" value="{{code_input}}" maxlength="11" />
+          </view>
+        </block>
+      </view>
+      <block wx:if="{{!isSubmitCode}}">
+        <view class="button_box">
+          <button class='getphone' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:if="{{mobile.length==0}}">获取微信手机号
+          </button>
+          <button class='getCode' style="background-color:{{isCode?'#C34944':'#bababa'}};width:{{mobile.length>0?'100%':'300rpx'}}" disabled="{{!isCode}}" bindtap="getCode">获取验证码
+          </button>
+        </view>
+      </block>
+      <block wx:else>
+
+        <button class='submitCode' disabled="{{code_input.length==0}}" style="background-color:{{code_input.length?'#C34944':'#bababa'}}" bindtap="submitCode">确定
+        </button>
+
+      </block>
+    </view>
+  </van-popup>
+</view>

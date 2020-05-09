@@ -1,0 +1,112 @@
+.new_moreny {
+  text-align: center;
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx 0;
+  margin: 10rpx 0;
+}
+
+.hint {
+  padding: 20rpx 0;
+  /* margin: 10rpx 0; */
+  text-align: center;
+  background: #fff;
+  /* border-radius: 15rpx; */
+}
+
+.vertical {
+  width: 2rpx;
+  background: #a5a5a5;
+  height: 60rpx;
+}
+
+.amount {
+  flex: 1;
+}
+
+.content {
+  padding: 0 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.subsidy_list {
+  background: #fff;
+  padding: 0 20rpx;
+  border-radius: 10rpx;
+}
+
+.item {
+  padding: 20rpx 0;
+  border-top: 1rpx solid #a5a5a5;
+}
+
+.position {
+  width: 130rpx;
+}
+
+.punishment {
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+
+.amend {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+  margin: 50rpx 0 50rpx 0;
+  border-radius: 10rpx;
+  background: #fff;
+}
+
+/* 多选start */
+
+.popup_box {
+  padding: 0 10rpx 50rpx 10rpx;
+}
+
+.label-1 {
+  margin-top: 20rpx;
+  padding: 0 10rpx;
+  text-align: center;
+  width: 145rpx;
+}
+
+.label-1__icon image {
+  width: 60rpx;
+  height: 60rpx;
+  /* border: 1rpx solid red; */
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.checked {
+  color: red;
+}
+
+.popup_content {
+  text-align: center;
+  padding: 50rpx 0 30rpx 0;
+}
+
+.btn_box {
+  padding: 0 10rpx;
+  color: red;
+}
+
+.user_img {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  display: block;
+}
+
+.consumer {
+  flex-direction: row-reverse;
+}
+
+/* end */

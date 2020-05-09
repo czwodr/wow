@@ -1,0 +1,34 @@
+<view class='main-wraper'>
+  <view class='nav'>
+    <navBar title='已购买的装备' background='#fff0cd'  back="{{true}}" bindback="handlerGobackClick"></navBar>
+  </view>
+
+  <view class="bill-wraper">
+    <view class="bill_list" wx:for="{{equip_list}}" wx:key="index">
+      <view class="flex_y">
+        <view class="icon flex-grow-0" wx:if="{{item.equipment_id!=0}}">
+          <image src="{{item.equipment_icon}}"></image>
+        </view>
+        <view class="info">
+          <view class="name">{{item.equipment_name}}</view>
+          <view class="configuration" wx:if="{{item.equipment_id!=0}}">
+            <text>{{item.equipment_type}}</text>
+            <text>lv{{item.equipment_grade}}</text>
+          </view>
+        </view>
+        
+      </view>
+      <view class="pay">
+        支付金额：
+        <text>{{item.price}}{{item.currency_type==2?'元':'金币'}}</text>
+      </view>
+      <view class="pay_for flex_sb">
+        <view>{{item.pay_time}}</view>
+        <view>{{item.pay_type==1?'交易成功':'交易失败'}}</view>
+      </view>
+    </view>
+    <view wx:if="{{equip_list.length==0}}" class="flex_vert">
+      还没有买过装备
+    </view>
+  </view>
+</view>

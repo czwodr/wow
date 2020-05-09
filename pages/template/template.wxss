@@ -1,0 +1,32 @@
+.mian {
+  padding: 0 20rpx;
+}
+
+.item {
+  padding: 30rpx 20rpx;
+  background: #fff8e7;
+  color: #1a3959;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.creation {
+  margin-bottom: 50rpx;
+  background: #30393c;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.creation .jia {
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 15rpx;
+}
+
+.subsidy_template text{
+  margin-right: 20rpx;
+}

@@ -1,0 +1,28 @@
+<view class='nav'>
+  <navBar title='参团列表' background='rgba(0, 0, 0, 0)' color='#fff' back="{{true}}" iconTheme='white' bindback="handlerGobackClick"></navBar>
+</view>
+<view class="main">
+  <view class="list">
+    <view class="item flex_sb flex_y">
+      <view class="">
+        <view>团名</view>
+        <view>团长</view>
+      </view>
+      <view>2020-3-16 15:35:53</view>
+    </view>
+    <view class="item flex_sb flex_y">
+      <view class="">
+        <view>团名：今晚打老虎</view>
+        <view>团长：今晚打母驴</view>
+      </view>
+      <view>2020-3-16 15:35:53</view>
+    </view>
+    <view class="item flex_sb flex_y">
+      <view class="">
+        <view>团名</view>
+        <view>团长</view>
+      </view>
+      <view>2020-3-16 15:35:53</view>
+    </view>
+  </view>
+</view>

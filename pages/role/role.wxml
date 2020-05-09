@@ -1,0 +1,40 @@
+<view class='main-wraper'>
+  <view class='nav'>
+    <navBar title='{{title}}' background='#fff0cd' back="{{true}}" bindback="handlerGobackClick"></navBar>
+  </view>
+
+  <view class="creation flex_vert" bindtap="skip" data-url="/pages/role-creation/role-creation">
+    <image src="../../images/jia.png" class="jia"></image>
+    创建新的角色
+  </view>
+  <view class="chose_title" wx:if="{{id != 0}}">请选择角色</view>
+  <view class="content">
+    <view class="role_list">
+      <view wx:for="{{role_lsit}}" wx:key="index" wx:for-item="index_item" class="role_ul" wx:for-index="wx_index" wx:if="{{index_item.list.length>0}}">
+        <view class="title">{{index_item.name}}</view>
+        <view class="role_item {{indexdata.index==index&&indexdata.wx_index==wx_index?'role_item_select':''}}" wx:for="{{index_item.list}}" wx:key="index" bindtap="go_back" data-index="{{index}}" data-wx_index="{{wx_index}}">
+          <view class="flex_sb">
+            <view class="game_name">游戏名：
+              <text style="color:{{index_item.color}};">{{item.role_name}}</text>
+            </view>
+            <view class="top_sty">服务器：{{item.service_name}}</view>
+            <view class="top_sty" style="color:{{item.camp_id == 1 ? '#4269E2' : '#DD021E'}};">{{item.camp_name}}</view>
+            <view class="close" bindtap="role_delete" data-index="{{index}}" data-wx_index="{{wx_index}}" wx:if="{{id==0}}">
+              <image src="../../images/del.png"></image>
+            </view>
+          </view>
+          <view class="race_sty flex_sb">
+            <text>种族：{{item.race_name}} </text>
+            <text style="color:{{index_item.color}}">职业：{{item.occupation_name}} </text>
+            <text>lv：{{item.grade}} </text>
+            <text class="talent">天赋：{{item.talent}} </text>
+          </view>
+          <image src="../../images/hook.png" class="hook" wx:if="{{indexdata.index==index&&indexdata.wx_index==wx_index&&id!=0}}"></image>
+        </view>
+      </view>
+      <view class="flex_vert" style="color:#d7cbaf" wx:if="{{role_lsit.length==0}}">
+        您尚未创建角色
+      </view>
+    </view>
+  </view>
+</view>

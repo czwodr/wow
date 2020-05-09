@@ -1,0 +1,29 @@
+page {
+  background: rgb(255, 255, 255);
+}
+
+.van-step {
+  background: #30393c;
+  padding-left: 20rpx !important;
+  margin: 20rpx 20rpx 20rpx 0;
+}
+
+.van-step__circle {
+  height: 24rpx !important;
+  width: 24rpx !important;
+}
+
+.van-icon-checked {
+  height: 28rpx !important;
+  width: 28rpx !important;
+  border-radius: 50%;
+  background: #30393c;
+}
+
+.van-icon-checked:before {
+  content: "" !important;
+}
+
+.van-step__title {
+  color: #fff0cd !important;
+}

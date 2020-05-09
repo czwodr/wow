@@ -1,0 +1,84 @@
+<view class='nav'>
+  <navBar title='开团规则' background='rgba(0, 0, 0, 0)' color='#fff' back="{{true}}" iconTheme='white' bindback="handlerGobackClick"></navBar>
+</view>
+<view class="main">
+  <view>
+    <image class="back_img" src="{{img_fuben}}"></image>
+  </view>
+  <view class="room_code">房间号：{{room_message.room_num}}</view>
+  <view class="content">
+    <image src="https://wowgame.yigworld.com/static/img/bg2.png"></image>
+    <view class="subject">
+      <scroll-view scroll-y="{{true}}" style="height:100%;">
+        <view class="transcript">副本：{{room_message.transcript_name}}</view>
+        <view class="transcript">服务器/阵营：{{room_message.service_name}}-{{room_message.camp_name}}</view>
+        <view class="transcript">支出：{{room_message.expenditure ? room_message.expenditure : 0}}{{danwei}}</view>
+        <view class="flex">
+          <view class="flex-grow-0">补贴方式：</view>
+          <view class="flex_wrap">
+            <view class="item" wx:for="{{room_message.subsidy.subsidy}}" wx:key="index" wx:if="{{item.value.length>0}}">
+              <text>{{item.name}}</text>
+              <text>-</text>
+              <text>{{item.value ? item.value : 0}}</text>
+              <text>{{danwei}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="flex">
+          <view>分配条件：</view>
+          <view>
+            <view>DPS需高于第 1 名的{{room_message.high_dps.value}}%</view>
+            <view>HPS需高于第 1 名的{{room_message.high_hps.value}}% </view>
+          </view>
+        </view>
+        <view class="flex">
+          <view>地板：</view>
+          <view wx:if="{{floor_status == 1}}">开启</view>
+          <view wx:else>未开启</view>
+        </view>
+        <view wx:if="{{note.length>0}}">团长备注：{{note}}
+        </view>
+        <view class="flex">
+          <view style="width:260rpx;">违规提醒：</view>
+          <view>
+            <view>
+              1.竞拍成功但未支付，即视为恶意竞拍做失信处理。超过两次将在后续竞拍时直接扣款支付
+            </view>
+            <view>
+              2.团员自动退出和被团长踢出该竟拍到的装备信息记录会被删除
+            </view>
+          </view>
+
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="protocol flex_vert">
+    <view class="flex_vert" bindtap="certigier">
+      <view>
+        <image wx:if="{{certigier}}" src="/images/icon_1.png"></image>
+        <image wx:else src="/images/icon_2.png"></image>
+      </view>
+      <view style="padding-left:10rpx;color:#fff;" bindtap="go_legal_show">已阅读并同意</view>
+    </view>
+    <!-- <view bindtap="go_legal_show">《竞价协议》</view> -->
+  </view>
+  <view class="btn_list flex_vert">
+    <view class="btn1" style="margin-right:30rpx;" bindtap="reject">拒绝</view>
+    <view class="btn2 {{certigier ? '' : 'noneActive'}}" bindtap="join">确认</view>
+  </view>
+</view>
+<view class="popup" wx:if="{{legal_show}}">
+  <view class="popup_bj" bindtap="legalClose"></view>
+  <view class="popup_box">
+    <view class="popup_title title">协议</view>
+    <scroll-view scroll-y="true" style="height: 1000rpx;">
+      <!-- <view class="article">
+        <rich-text nodes="{{mes_content}}" />
+      </view> -->
+      <view>
+        <image src="https://wowgame.yigworld.com/static/img/agreement/{{index+1}}.png" wx:for="{{17}}" wx:key="index" style="width:750rpx;height:1192rpx;"></image>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<view class="mian">
+  <view class="content">
+    <view> 欢迎来到魔兽团吧！</view>
+    <view>本小程序是优选的团金存托，公账分配助手。</view>
+    <view style="padding-top:20rpx;">我们提倡公平互信的游戏环境，本小程序借用科技的手段来规范人的行为，全程透明，安全便捷，拒绝毛人毛团</view>
+    <view>我们提供最优选的团金存托，通过公账分配助手对金币团/人民币团全程进行管理</view>
+    <view style="padding-top:20rpx;">并且带给玩家最快捷最高效的游戏体验，能够实现自动拍装，自动分配，自动记账，在享受游戏乐趣的同时， 也能带给各位玩家额外的经济收获
+    </view>
+    <view style="padding-top:20rpx;">关于本小程序，目前已上线部分功能，之后会陆续添加其他功能， 希望能为广大魔兽怀旧服玩家带来帮助，我们欢迎您在意见反馈里提出宝贵意见
+    </view>
+    <view style="padding-top:20rpx;">本小程序数据来源自互联网，如有不妥之处，请及时与我们联系，我们将在48小时内处理</view>
+    <view style="padding-top:20rpx;">杭州异构网络科技有限公司</view>
+    <view>地址：杭州市余杭区盛奥西溪铭座</view>
+    <view bindtap="call">
+      <text>热线：</text>
+      <text class="phone">0571-87097218</text>
+    </view>
+    <view>邮箱：yigouwow@163.com</view>
+    <view>客服YY：15827011</view>
+  </view>
+</view>

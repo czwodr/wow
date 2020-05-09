@@ -1,0 +1,16 @@
+.mian {
+  padding: 20rpx 20rpx 0 20rpx;
+}
+
+.content {
+  padding: 30rpx 30rpx;
+  background: #30393c;
+  border-radius: 15rpx;
+  font-size: 26rpx;
+  line-height: 42rpx;
+  color: #fff0cd;
+}
+
+.phone {
+  text-decoration: underline;
+}

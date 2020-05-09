@@ -1,0 +1,87 @@
+<view class="main-content">
+  <view class="header">
+    <image class="money_img" src="/images/icon_gold@3x.png" />
+    <view class="score_title">我的余额</view>
+    <view class="score_number">
+      <text style="font-size:37rpx;font-weight: bold;">￥</text>
+      <text>{{user_info.balance}}</text>
+    </view>
+    <view class="check" bindtap="skip" data-url="/pages/account-detail/account-detail">查看账户明细</view>
+    <!-- <view class="recharge flex_vert">
+    <view class="rech_box" style="border-right: 1rpx solid #a5a5a5;" bindtap="showPopup">充值</view>
+    <view class="rech_box" bindtap="getmoney">提现</view>
+  </view> -->
+  </view>
+  <view class="base_btn">
+    <view>
+      <view wx:if="{{isiphone}}" class="bt1" bindtap="skip" data-url="/pages/ios-pay/ios-pay">IOS充值问题</view>
+      <view wx:else class="bt1" bindtap="showPopup">充值</view>
+    </view>
+    <view class="bt2" bindtap="getmoney" style="margin-top:40rpx;">提现</view>
+    <text class="flex_vert" style="font-size:22rpx; margin-top:20rpx;">提示：提现金额大于1元</text>
+  </view>
+</view>
+<!-- <view class="main">
+  <view class="tab_bar flex_y">
+    <view class="tab_title flex-grow-1">账户明细</view>
+  </view>
+  <view class="list">
+    <view class="item flex_sb flex_y" wx:for="{{recode}}" wx:key="index">
+      <view>
+        <view>{{item.msg}}</view>
+        <view style="padding-top:10rpx;">{{item.create_time}}</view>
+      </view>
+      <view>{{item.amount}}</view>
+    </view>
+  </view>
+</view> -->
+<van-popup show="{{ show }}" bind:close="showPopup" round>
+  <view class="popup_content">
+    <view class="hint">充值金额</view>
+    <view class="flex_y" style="padding-bottom: 20rpx;">
+      <view style="padding-right:20rpx;font-size:37rpx;font-weight: bold;">￥</view>
+      <input placeholder="请输入金额" bindinput="money" value="{{money}}" type="digit" style="font-size:37rpx;" />
+    </view>
+    <view class="wire"></view>
+    <view class="pay" bindtap="money_pay">充值</view>
+  </view>
+</van-popup>
+<van-popup show="{{ deposit }}" bind:close="showDeposit" round>
+  <view class="popup_content">
+    <view class="hint">提现金额</view>
+    <view class="flex_y" style="padding-bottom: 20rpx;">
+      <view style="padding-right:20rpx;font-size:37rpx;font-weight: bold;">￥</view>
+      <input placeholder="请输入金额" bindinput="deposit_money" value="{{deposit_money}}" type="digit" style="font-size:37rpx;" />
+    </view>
+    <view class="wire"></view>
+    <view class="pay" bindtap="application">提现</view>
+  </view>
+</van-popup>
+<van-popup show="{{ verification }}" round>
+  <view class="popup_content">
+    <view class="caption">
+      <text>请输入验证码</text>
+      <image class="close" src="/images/close.png" bindtap="close_verification" />
+    </view>
+    <view>
+      <view class="way flex_sb flex_y">
+        <view>提现金额</view>
+        <view class="flex_y">
+          <image class="way_img" src="/images/right-02.png"></image>
+          <view style="color:#03C160;font-weight:bold;">微信</view>
+        </view>
+      </view>
+      <view class="caption_money">￥{{deposit_money}}</view>
+      <view class="hint">已向您手机号{{mobile}}发送验证码</view>
+    </view>
+    <view class="flex_y flex_sb" style="padding-bottom: 20rpx;">
+      <input placeholder="请输入验证码" bindinput="verification_code" value="{{verification_code}}" type="number" style="font-size:28rpx;" />
+      <view class="flex_vert click_code {{!isdownTime ? 'click' : 'unclick'}}" bindtap="gain_code">
+        重新获取
+        <van-count-down time="{{ downTime }}" format=" ss 秒" wx:if="{{isdownTime}}" bind:finish="setDownTime" />
+      </view>
+    </view>
+    <view class="wire"></view>
+    <view class="pay" bindtap="verification_sure">确定</view>
+  </view>
+</van-popup>

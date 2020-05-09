@@ -1,0 +1,77 @@
+<view class="main">
+  <view class="header">
+    <view class="user-info">
+      <view wx:if="{{log_state}}" class="flex flex_y">
+        <view bindtap="skip" data-url="/pages/user-info/user-info" class="avatar">
+          <image class="portrait" src="{{user_info.avatar}}"></image>
+        </view>
+        <view class="account" bindtap="skip" data-url="/pages/account/account">
+          <view class="name">{{user_info.nickname}}</view>
+          <view class="balance">账户余额：{{user_info.balance}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="not_log" wx:if="{{!log_state}}" bindtap="go_login" data-url="/pages/login/login">
+      <image src="../../images/not-log.png"></image>
+      <view class="log_out">未登录</view>
+    </view>
+  </view>
+  <view class="personal">
+    <view class="message">
+      <view class="message-item flex_sb flex_y" bindtap="skip" data-url="/pages/role/role?id=0">
+        <view>我的角色</view>
+        <view>
+          <image class="r_icon" src="../../images/right1.png"></image>
+        </view>
+      </view>
+      <view class="message-item flex_sb flex_y" bindtap="skip" data-url="/pages/account-team/account-team">
+        <view>团账单</view>
+        <view>
+          <image class="r_icon" src="../../images/right1.png"></image>
+        </view>
+      </view>
+      <!-- <view class="message-item flex_sb flex_y" bindtap="skip" data-url="/pages/template/template?way=1">
+        <view>我的模板</view>
+        <view>
+          <image class="r_icon" src="../../images/right1.png"></image>
+        </view>
+      </view> -->
+      <!-- <view class="message-item flex_sb flex_y" bindtap="skip" data-url="/pages/offered/offered">
+        <view>我参加过的团</view>
+        <view>
+          <image class="r_icon" src="../../images/right.png"></image>
+        </view>
+      </view> -->
+      <view class="message-item flex_sb flex_y" bindtap="skip" data-url="/pages/bill/bill">
+        <view>已购得</view>
+        <view>
+          <image class="r_icon" src="../../images/right1.png"></image>
+        </view>
+      </view>
+      <view class="message-item flex_sb flex_y" bindtap="skip" data-url="/pages/feedback/feedback">
+        <view>意见反馈</view>
+        <view>
+          <image class="r_icon" src="../../images/right1.png"></image>
+        </view>
+      </view>
+      <view class="message-item flex_sb flex_y" bindtap="clear_data">
+        <view>清除缓存</view>
+        <view>
+          <image class="r_icon" src="../../images/right1.png"></image>
+        </view>
+      </view>
+      <view class="message-item flex_sb flex_y" bindtap="skip" data-url="/pages/about/about">
+        <view>关于我们</view>
+        <view>
+          <image class="r_icon" src="../../images/right1.png"></image>
+        </view>
+      </view>
+      <view class="message-item flex_sb flex_y" bindtap="skip" data-url="/pages/plan/plan">
+        <view>更新日志</view>
+        <view>
+          <image class="r_icon" src="../../images/right1.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

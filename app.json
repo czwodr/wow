@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/user-info/user-info",
+    "pages/creative/creative",
+    "pages/join-us/join",
+    "pages/room-code/room-code",
+    "pages/role/role",
+    "pages/allocation/allocation",
+    "pages/role-creation/role-creation",
+    "pages/distributor/distributor",
+    "pages/distributor-detail/distributor-detail",
+    "pages/bill/bill",
+    "pages/account/account",
+    "pages/offered/offered",
+    "pages/feedback/feedback",
+    "pages/ios-pay/ios-pay",
+    "pages/login/login",
+    "pages/account-team/account-team",
+    "pages/account-team-detail/account-team-detail",
+    "pages/template/template",
+    "pages/regulation/regulation",
+    "pages/account-detail/account-detail",
+    "pages/about/about",
+    "pages/plan/plan"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "活动",
+        "iconPath": "images/group.png",
+        "selectedIconPath": "images/group1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me1.png"
+      }
+    ],
+    "selectedColor": "#fff0cd",
+    "color": "#838383",
+    "backgroundColor": "#30393c"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "navBar": "components/navBar/navBar",
+    "van-tabbar": "vant-weapp/tabbar/index",
+    "van-tabbar-item": "vant-weapp/tabbar-item/index",
+    "van-popup": "vant-weapp/popup/index",
+    "van-dialog": "vant-weapp/dialog/index",
+    "van-picker": "vant-weapp/picker/index",
+    "van-search": "vant-weapp/search/index",
+    "van-cell": "vant-weapp/cell/index",
+    "van-cell-group": "vant-weapp/cell-group/index",
+    "van-radio": "vant-weapp/radio/index",
+    "van-radio-group": "vant-weapp/radio-group/index",
+    "van-button": "vant-weapp/button/index",
+    "van-checkbox": "vant-weapp/checkbox/index",
+    "van-count-down": "vant-weapp/count-down/index",
+    "van-icon": "vant-weapp/icon/index",
+    "van-notice-bar": "vant-weapp/notice-bar/index",
+    "van-steps": "vant-weapp/steps/index"
+  }
+}

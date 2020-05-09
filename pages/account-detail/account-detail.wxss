@@ -1,0 +1,90 @@
+page {
+  background: #fff0cf;
+}
+
+.main {
+  padding: 0 20rpx;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+}
+
+.header {
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff0cf;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.header_item {
+  text-align: center;
+}
+
+.header_hint {
+  height: 5rpx;
+  width: 60%;
+  margin: 0 auto;
+  background: #30393c;
+  border-radius: 20rpx;
+}
+
+.score_title {
+  padding-top: 20rpx;
+  text-align: center;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.score_number {
+  padding-top: 38rpx;
+  color: #30393c;
+  font-size: 72rpx;
+  text-align: center;
+}
+
+.recharge {
+  padding: 30rpx 0 20rpx 0;
+  font-size: 28rpx;
+  text-align: center;
+  font-weight: bold;
+}
+
+.rech_box {
+  padding: 0 20rpx;
+}
+
+.tab_bar {
+  top: 130rpx;
+  height: 100rpx;
+  width: 100%;
+  background: #fff;
+}
+
+.tab_title {
+  text-align: center;
+}
+
+.line-height {
+  height: 80rpx;
+  width: 1rpx;
+  background: #a5a5a5;
+}
+
+.list {
+}
+
+.item {
+  padding: 0 20rpx;
+  border-radius: 20rpx;
+  height: 120rpx;
+  color: #30393c;
+  margin-top: 10rpx;
+  background: #fef9e6;
+}
+
+.hint {
+  text-align: center;
+  padding: 50rpx 0;
+}

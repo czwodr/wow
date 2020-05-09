@@ -1,0 +1,190 @@
+page {
+  background: #32383f;
+}
+
+.main {
+  padding-top: 280rpx;
+}
+
+.lxy-nav-bar {
+  background-color: transparent !important;
+}
+
+.popup-memu {
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #dedbd5;
+  border-bottom: 1px solid #eee;
+  display: block;
+}
+
+.line {
+  background-color: #eee;
+  margin-left: 10px;
+  height: 1px;
+  margin-right: 10px;
+}
+
+.popup-memu {
+  height: 50px;
+  font-size: 15px;
+  line-height: 50px;
+  border-bottom: 1px solid #eee;
+}
+
+.payMode {
+  display: flex;
+  background: #fff;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+}
+
+.payMode image {
+  width: 30px;
+  height: 30px;
+  margin-left: 18px;
+  margin-right: 10px;
+}
+
+.sheet-content {
+  background-color: #fff;
+  padding: 0 15rpx;
+}
+
+/* 键盘 */
+
+.password-input {
+  display: flex;
+  width: 660rpx;
+  /* border: 1px solid #ddd; */
+  margin: 0 auto;
+  background-color: #fff0cd;
+  border-radius: 50px;
+}
+
+.password-input view {
+  width: 110rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  color: #30393c;
+  font-weight: bold;
+  justify-content: center;
+  box-sizing: border-box;
+  border-right: 2rpx solid #30393c;
+}
+
+.password-input view:nth-child(6) {
+  border-right: none;
+}
+
+.password-input view text {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #333;
+}
+
+.tips {
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.tips text {
+  color: #c30;
+}
+
+.keyboard {
+  width: 100%;
+  display: flex;
+  background-color: #fff0cd;
+  /* border-top: 1px solid #30393c; */
+  margin-top: 50rpx;
+}
+
+.keyboard .number {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.hint {
+  text-align: center;
+  color: #fff0cd;
+  font-size: 32rpx;
+  font-weight: bold;
+  padding-bottom: 20rpx;
+}
+
+.keyboard .number view {
+  width: 250rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  font-size: 46rpx;
+  font-weight: bold;
+  box-sizing: border-box;
+  border-right: 1px solid #30393c;
+  border-top: 1px solid #30393c;
+}
+
+.keyboard .number view:nth-child(3n) {
+  border-right: none;
+}
+
+.keyboard .ctr-btn {
+  width: 180rpx;
+}
+
+.keyboard .ctr-btn view {
+  height: 240rpx;
+  line-height: 240rpx;
+  text-align: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+
+.keyboard .ctr-btn view .iconfont {
+  font-size: 44rpx !important;
+  color: #c30;
+}
+
+.keyboard .ctr-btn view:nth-child(2) {
+  font-size: 46rpx;
+  color: #c30;
+}
+
+.keyboard .active {
+  background-color: #e4e7ed;
+}
+
+.activity {
+  background-color: #fff;
+  padding: 25rpx 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24rpx;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.activity.activity-item {
+  font-size: 26rpx;
+}
+
+.arrows-right {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.arrows-right.active {
+  transform: rotate(270deg);
+}
+
+/* 键盘结束 */
+
+.key_num {
+  position: fixed;
+  bottom: 0;
+}

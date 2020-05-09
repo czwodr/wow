@@ -1,0 +1,44 @@
+<view class='nav'>
+  <navBar title='扣罚确认' background='#FFF0CD' back="{{true}}" bindback="handlerGobackClick"></navBar>
+</view>
+<view class="content">
+  <view class="allot_list">
+    <view class="allot_item">
+      <view class="allot_detail">
+        <view class="allot_box flex_sb flex_y" wx:for="{{allocation_list}}" wx:key="index">
+          <view class="flex_y">
+            <image class="img" src="{{item.userInfo.avatar}}"></image>
+            <view>
+              <view>名称：{{item.userInfo.user_role_name}}</view>
+              <view style="font-size:24rpx;font-weight: bold;">
+                <view class="income">收入：
+                  <text>￥{{item.money}}</text>
+                  <text>{{item.goldGoin}}金币</text>
+                </view>
+                <view>
+                  <text wx:if="{{item.deduction}}">扣除：{{item.deduction}}</text>
+                  <text wx:if="{{item.deduction && item.currency_type == 2}}">元</text>
+                  <text wx:if="{{item.deduction && item.currency_type == 1}}">金</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view wx:if="{{allocation_list.length > 1 && status == 0}}" bindtap="show_modal" data-index="{{index}}">
+            扣罚
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="grant" bindtap="hint">确定分配</view>
+</view>
+<van-popup show="{{ show }}" bind:close="showPopup" round>
+  <view class="popup_content">
+    <view class="hint">扣除</view>
+    <view class="flex_y" style="padding-bottom: 20rpx;">
+      <view style="padding-right:20rpx;" class="deduct_name">金额</view>
+      <input placeholder="请输入金额" bindinput="deduct" value="{{money}}" type="number" class="deduct" />
+    </view>
+    <view class="pay" bindtap="money_pay">确定扣除</view>
+  </view>
+</van-popup>

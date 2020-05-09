@@ -1,0 +1,1134 @@
+.group_head {
+  padding: 10rpx 0rpx 10rpx 30rpx;
+}
+
+.group_head .logo {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.group_wraper image {
+  width: 100%;
+  height: 100%;
+}
+
+.look {
+  text-align: center;
+}
+
+.look_icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0px auto;
+}
+
+.look .text {
+  font-size: 20rpx;
+}
+
+.group_head .info {
+  margin-left: 20rpx;
+  width: 600rpx;
+}
+
+.group_head .name {
+  font-weight: 600;
+}
+
+.group_head .level {
+  font-size: 24rpx;
+}
+
+.group_member {
+  padding: 20rpx 30rpx;
+}
+
+.group_member .title {
+  font-weight: 600;
+}
+
+.group_member .ul {
+  margin-top: 14rpx;
+}
+
+.group_member .ul .li {
+  margin-right: 20rpx;
+  text-align: center;
+}
+
+.group_member .ul .li .logo {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.group_member .ul .li .identity {
+  color: #000;
+  font-size: 22rpx;
+}
+
+.price_wraper .price_li {
+  padding: 15rpx 20rpx;
+  width: 220rpx;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f7b10a;
+}
+
+.price_wraper .price_li .text {
+  font-size: 24rpx;
+}
+
+.buy_record {
+  background-color: transparent !important;
+}
+
+.buy_record .text {
+  color: #000 !important;
+  margin-top: 10rpx;
+}
+
+.cover {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0px auto;
+}
+
+.cover image {
+  width: 100%;
+  height: 100%;
+}
+
+.auction_wraper {
+  padding-bottom: 100rpx;
+}
+
+.auction_ul {
+  margin: 10rpx 20rpx;
+  background-color: #fff;
+  padding: 10rpx 20rpx;
+}
+
+.auction_ul .floor_type {
+  font-size: 20rpx;
+  margin-left: 10rpx;
+  padding: 4rpx 8rpx;
+  background-color: #d3d3d3;
+  border-radius: 8rpx;
+}
+
+.auction_box .floor_price {
+  font-size: 22rpx;
+  margin-top: 10rpx;
+}
+
+.floor_gm image {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.floor_gm text {
+  font-size: 24rpx;
+  margin-right: 10rpx;
+  color: #999;
+}
+
+.floor_gm .sh {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f7b10a;
+  text-align: center;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  line-height: 44rpx;
+  padding: 0rpx 16rpx;
+}
+
+.auction_box .title {
+  font-weight: 600;
+  padding-left: 20rpx;
+}
+
+.auction_box .btn_sty {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f7b10a;
+  text-align: center;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  line-height: 44rpx;
+  padding: 0rpx 16rpx;
+}
+
+.top_bar {
+  background: #fff;
+  height: 70rpx;
+  margin: 10rpx 20rpx;
+}
+
+.top_bar_li {
+  flex: 1;
+  font-size: 24rpx;
+}
+
+.bar_item {
+  display: inline-block;
+  padding: 30rpx 16rpx;
+  font-size: 28rpx;
+  color: #a5a5a5;
+}
+
+.top_bar_current {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #f7b10a;
+}
+
+.equip_ul {
+  max-height: 800rpx;
+}
+
+.equip_li image {
+  width: 100%;
+  height: 100%;
+}
+
+.equip_li {
+  margin: 10rpx 20rpx;
+  padding: 10rpx;
+  background-color: #fff;
+}
+
+.equip_li .icon {
+  width: 100rpx;
+}
+
+.equip_li .cover {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.equip_li .info {
+  width: 470rpx;
+  padding-left: 20rpx;
+}
+
+.equip_li .fun {
+  width: 180rpx;
+}
+
+.equip_li .current_price {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+
+.equip_li .level {
+  font-size: 20rpx;
+  margin-left: 10rpx;
+  padding: 4rpx 8rpx;
+  background-color: #d3d3d3;
+  border-radius: 8rpx;
+}
+
+.equip_li .type {
+  font-size: 20rpx;
+  margin-left: 10rpx;
+  padding: 4rpx 8rpx;
+  background-color: #d3d3d3;
+  border-radius: 8rpx;
+}
+
+.fun_btn {
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  z-index: 99;
+}
+
+.fun_btn .bnt1 {
+  flex: 1;
+  height: 120rpx;
+  line-height: 120rpx;
+  background-color: #30393c;
+  color: #fff0cd;
+  text-align: center;
+  position: relative;
+}
+
+.set_popup_num {
+  position: absolute;
+  top: 32rpx;
+  left: 246rpx;
+  width: 36rpx;
+  height: 36rpx;
+  background-color: #c92036;
+  color: #fff;
+  border-radius: 50%;
+  display: block;
+  line-height: 34rpx;
+  text-align: center;
+  font-size: 20rpx;
+}
+
+.right_border {
+  border-right: 1px solid #fef9e6;
+}
+
+/* 房间详细信息 */
+
+.group_box {
+  padding: 40rpx;
+  max-height: 1082rpx;
+  min-height: 800rpx;
+}
+
+.group_box .li {
+  font-size: 24rpx;
+  margin-bottom: 18rpx;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.group_box .title {
+  width: 200rpx;
+  text-align: right;
+  padding-right: 20rpx;
+  font-size: 26rpx;
+  color: #000;
+}
+
+.subsidies .type {
+  font-size: 20rpx;
+  padding: 2rpx 8rpx;
+  background-color: #d3d3d3;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+/* 成员信息 */
+
+.team_ul {
+  height: 982rpx;
+}
+
+.team_ul .name {
+  padding: 10rpx;
+  font-size: 24rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.team_ul .icon {
+  width: 60rpx;
+}
+
+.team_li {
+  margin: 0rpx;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.team_ul .cover {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.team_li .info {
+  width: 390rpx !important;
+  padding-left: 20rpx;
+}
+
+.team_li .user_role_name {
+  font-weight: 600;
+}
+
+.team_li .info text {
+  margin-right: 10rpx;
+  font-size: 22rpx;
+  color: #424242;
+}
+
+.team_li .fun {
+  width: 280rpx !important;
+  text-align: center;
+}
+
+.team_li .btn_sty {
+  float: right;
+  margin-left: 20rpx;
+}
+
+.team_li .level {
+  font-size: 20rpx !important;
+  padding: 2rpx 4rpx;
+  background-color: #dddcdc;
+}
+
+.team_li .btn_sty {
+  padding: 4rpx 20rpx;
+  display: inline;
+  background-color: #eee;
+  font-size: 24rpx;
+  border-radius: 30rpx;
+}
+
+.group_flex {
+  flex: 1;
+}
+
+.funBtn {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #000;
+  text-align: center;
+  font-size: 28rpx;
+  color: #f7b10a;
+}
+
+/* 添加装备 */
+
+.boss_box {
+  background-color: #2d2d2d !important;
+}
+
+.scroll_h {
+  height: 1082rpx;
+  background-color: #2d2d2d;
+}
+
+.boss_equip_h {
+  height: 800rpx;
+}
+
+.boss_equip {
+  font-size: 24rpx;
+}
+
+.ul_box .ul_li {
+  background-color: #190f00;
+  color: #ffd100;
+  text-align: center;
+  padding: 20rpx 0px;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.eqiop_name {
+  width: 190rpx;
+}
+
+.eqiop_name .english_name {
+  font-size: 22rpx;
+}
+
+.eqiop_icon {
+  width: 80rpx;
+  text-align: center;
+}
+
+.eqiop_icon image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.l1_eqiop {
+  width: 80rpx;
+  position: relative;
+}
+
+.select_class {
+  width: 324rpx;
+}
+
+.select_icon {
+  width: 80rpx;
+}
+
+.icon_sty {
+  width: 30rpx;
+  height: 30rpx;
+  border: 1px solid #fff;
+  position: relative;
+  border-radius: 5rpx;
+  margin-left: 20rpx;
+}
+
+.icon_sty image {
+  position: absolute;
+  top: -5rpx;
+  left: -5rpx;
+  width: 37rpx;
+  height: 37rpx;
+}
+
+.set_up {
+  width: 90rpx;
+  height: 34rpx;
+  background-color: #fff;
+  margin: 0px auto;
+  color: #000;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.set_boss_equip {
+  width: 100%;
+}
+
+.set_boss_equip .set_hook {
+  height: 100rpx;
+  color: #fff;
+  width: 80rpx;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+
+.set_hook text {
+  font-size: 22rpx;
+  text-align: center;
+  padding-top: 8rpx;
+  padding-left: 10rpx;
+}
+
+.li_qu {
+  width: 340rpx;
+}
+
+.set_boss_equip .set_boss_equip_btn {
+  text-align: center;
+  line-height: 130rpx;
+  color: #ffd100;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.auction_type_picker {
+  color: #ffd100;
+  font-size: 24rpx;
+}
+
+.drop {
+  width: 16rpx;
+  height: 16rpx;
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+}
+
+.eqiop_type {
+  width: 100rpx;
+  position: relative;
+}
+
+.set_up_input {
+  width: 140rpx;
+}
+
+.equip_popup_title {
+  color: #fff;
+}
+
+/* 设置时间 */
+
+.floor_li {
+  margin-bottom: 30rpx;
+}
+
+.set_floor_btn {
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  color: #ffd100;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-top: 100rpx;
+}
+
+.floor_time {
+  margin-left: 30rpx;
+}
+
+.floorEquipIpunt {
+  border: 1px solid #190f00;
+  width: 200rpx;
+  font-size: 24rpx;
+  margin-left: 30rpx;
+  text-align: center;
+  height: 60rpx;
+}
+
+.time_wap {
+  width: 200rpx;
+  position: relative;
+}
+
+.time_wap .drop {
+  width: 22rpx;
+  height: 22rpx;
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+}
+
+/* 添加装备 */
+
+/* 立即拍 */
+
+.pat_title {
+  background-color: #2d2d2d;
+  color: #fff;
+}
+
+.pat_box {
+  height: 1082rpx;
+  background-color: #2d2d2d;
+}
+
+.pat_box image {
+  width: 100%;
+  height: 100%;
+}
+
+.pat_box {
+  padding: 30rpx;
+}
+
+.pat_box .cover {
+  margin: 0rpx;
+}
+
+.pat_box .info {
+  flex: 1;
+  padding-left: 20rpx;
+  color: #ffd100;
+}
+
+.record_box {
+  margin-top: 30rpx;
+}
+
+.record_box .title {
+  color: #fff;
+}
+
+.scroll_record {
+  height: 800rpx;
+  margin-top: 20rpx;
+  border: 1px solid rgba(0, 0, 0, 0.582);
+  padding: 20rpx;
+}
+
+.record_li {
+  margin-bottom: 10rpx;
+  color: #b4b4b4;
+}
+
+.record_li .cover_box {
+  width: 50rpx;
+}
+
+.record_li .cover_box .cover {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.record_box .name {
+  width: 270rpx;
+  font-size: 24rpx;
+}
+
+.record_box .timer {
+  font-size: 22rpx;
+  width: 180rpx;
+  text-align: center;
+}
+
+.record_box .price {
+  width: 150rpx;
+  font-size: 22rpx;
+  text-align: center;
+  color: #ffd100;
+}
+
+.pat_price_box {
+  margin-top: 60rpx;
+}
+
+.pat_price {
+  width: 100%;
+  height: 80rpx;
+  background: #b4b4b4;
+  border-radius: 40rpx;
+  text-align: center;
+}
+
+.note {
+  color: #f7b10a;
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.set_pat {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #190f00;
+  color: #f7b10a;
+  border-radius: 10rpx;
+  margin-top: 80rpx;
+}
+
+.pat_box .type {
+  padding: 2rpx 10rpx;
+  background-color: #b4b4b4;
+  font-size: 22rpx;
+  margin-left: 20rpx;
+  color: #000;
+  border-radius: 8rpx;
+}
+
+.pat_count_down {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+}
+
+.pat_count_down .van-count-down {
+  color: #f7b10a;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+
+.pat_count_down .timer {
+  font-size: 24rpx;
+}
+
+.empty_list {
+  margin: 10rpx 20rpx;
+  background-color: #fff;
+  font-size: 24rpx;
+  line-height: 300rpx;
+  text-align: center;
+}
+
+/* 我的交易 */
+
+.bill_list {
+  background-color: #fff;
+  margin: 20rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.bill_list image {
+  width: 100%;
+  height: 100%;
+}
+
+.bill_list .icon {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.bill_list .info {
+  flex: 1;
+  padding: 0rpx 20rpx;
+}
+
+.bill_list .info .name {
+  font-size: 28rpx;
+  color: #464646;
+}
+
+.bill_list .info .configuration {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  color: #a1a1a1;
+}
+
+.bill_list .info .configuration text {
+  margin-right: 20rpx;
+}
+
+.bill_list .pay {
+  padding: 15rpx 0rpx;
+  text-align: right;
+  font-size: 24rpx;
+  color: #a1a1a1;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.bill_list .pay image {
+  border-radius: 50%;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.bill_list .pay text {
+  color: #464646;
+}
+
+.pay_for {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+
+.on_pay {
+  position: absolute;
+  top: -34rpx;
+  right: 0px;
+  width: 138rpx !important;
+  height: 138rpx !important;
+}
+
+.pay_for .btn {
+  background-image: linear-gradient(135deg, #2c0403, #350802 70%, #2e0d00);
+  box-shadow: 0 3px 6px 0 rgba(36, 6, 2, 0.2);
+  color: #f7b10a;
+  border: none;
+  height: 54rpx;
+  line-height: 54rpx;
+  text-align: center;
+  width: 140rpx;
+  border-radius: 28rpx;
+}
+
+.pay_for .pay_time {
+  flex: 1;
+  font-size: 24rpx;
+  color: #a1a1a1;
+}
+
+.pay_for image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.nav_title .nav_type{
+  flex: 1;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fef9e6;
+  border-right: 1px solid #fff0cd;
+  color:#bbb;
+}
+
+.select_nav_type{
+  color:#000 !important;
+  font-weight: 600;
+  border-bottom: 2px solid #999;
+}
+
+
+/* 我的交易 */
+
+/* 立即拍 */
+
+.open_game_title {
+  text-align: center;
+  margin: 60rpx;
+  font-weight: 600;
+}
+
+.boss_title {
+  color: #fff;
+  border-bottom: 1px solid #190f00;
+}
+
+.subsidy_title {
+  padding: 30rpx;
+}
+
+/* 2020/4/10 */
+
+.top {
+  width: 100%;
+  height: 120rpx;
+  position: relative;
+}
+
+.top image {
+  width: 100%;
+  height: 100%;
+}
+
+.top_info {
+  position: absolute;
+  bottom: 10rpx;
+  left: 0rpx;
+  color: #fff0cd;
+}
+
+.top_info .timer {
+  font-size: 20rpx;
+  padding-left: 60rpx;
+}
+
+.group_list {
+  padding: 20rpx;
+}
+
+.group_list .list_1 {
+  width: 355rpx;
+}
+
+.group_list .list_1 .img {
+  width: 64rpx;
+  height: 64rpx;
+  margin-right: 25rpx;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.group_list .list_1 .img .title {
+  background-color: #30393c;
+  font-size: 20rpx;
+  text-align: center;
+  height: 30rpx;
+  position: absolute;
+  bottom: -2rpx;
+  left: 0px;
+  width: 64rpx;
+  color: #fff;
+}
+
+.group_list image {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+}
+
+.group_list .set_group {
+  width: 64rpx;
+  height: 64rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.group_list .set_group image {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+
+.group_list .over .btn {
+  background-color: #c92036;
+  height: 64rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 32rpx;
+  width: 340rpx;
+  font-size: 24rpx;
+}
+
+.rules_list {
+  width: 346rpx;
+  height: 88rpx;
+  background-color: #30393c;
+  border-radius: 44rpx;
+  color: #fff0cd;
+}
+
+.rules_list text {
+  width: 200rpx;
+  display: inline-block;
+  text-align: right;
+  margin-top: 4rpx;
+  font-size: 26rpx;
+}
+
+.boss_list {
+  width: 148rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #30393c;
+}
+
+.boss_list image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.boss_list .select_name {
+  height: 8rpx;
+  width: 140rpx;
+  border-radius: 8rpx;
+  background-color: #30393c;
+  margin-top: 14rpx;
+}
+
+/* 装备竞价 重新 */
+
+.table_ul {
+  padding: 0rpx 20rpx 20rpx 20rpx;
+  font-size: 22rpx;
+  text-align: center;
+}
+
+.table_ul .sty {
+  background-color: #fef9e6;
+  height: 74rpx;
+  color: #838383;
+}
+
+.table_ul .t1 {
+  width: 214rpx;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+}
+
+.table_ul .t2 {
+  width: 176rpx;
+  border-right: 1px solid #fff0cd;
+  border-left: 1px solid #fff0cd;
+}
+
+.table_ul .t3 {
+  width: 320rpx;
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+
+.table_li {
+  background-color: #fef9e6;
+  height: 150rpx;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.auction1 {
+  background-color: #ccc;
+}
+
+.table_li .t1 {
+  width: 214rpx;
+}
+
+.table_li .t2 {
+  width: 176rpx;
+}
+
+.table_li .t3 {
+  width: 320rpx;
+}
+
+.table_li .img {
+  width: 90rpx;
+  height: 80rpx;
+}
+
+.table_li image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+
+.table_li .name {
+  color: #009fda;
+  font-size: 24rpx;
+  font-weight: 600;
+  text-align: left;
+}
+
+.table_li .type {
+  color: #fff;
+  background-color: #30393c;
+  font-size: 20rpx;
+  padding: 2rpx 6rpx;
+  border-radius: 10rpx;
+  margin: 8rpx 0rpx;
+  width: 120rpx;
+}
+
+.table_li .timer {
+  color: #30393c;
+  font-size: 22rpx;
+  text-align: left;
+}
+
+.table_li .now_price {
+  color: #c92036;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.table_li .hint {
+  color: #0000ee;
+  font-size: 22rpx;
+  padding-top: 10rpx;
+  text-decoration:underline;
+}
+
+.table_li .now_hint {
+  color: #838383;
+  font-size: 22rpx;
+}
+
+.table_li .btn {
+  width: 90rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  color: #fff;
+}
+
+.table_li .number {
+  width: 160rpx;
+  height: 66rpx;
+  border: 1px solid#30393c;
+  border-radius: 10rpx;
+  color: #30393c;
+  text-align: center;
+}
+
+.color_type text {
+  background-color: #2e0d00;
+  color: #fff;
+  font-size: 20rpx;
+  padding: 2rpx 6rpx;
+  border-radius: 5rpx;
+  margin-right: 6rpx;
+  margin-top: 10rpx;
+}
+
+.scroll_equip {
+  height: 1002rpx;
+  padding: 50rpx 20rpx 0rpx 20rpx;
+  background-color: #fff0cd;
+  font-size: 24rpx;
+}
+
+/* 装备竞价 重新 */
+
+.isdelfuben {
+  margin-top: 100rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+
+.team_list_sty{
+  background-color: #30393C;
+  color: #FFF0CD;
+  height: 64rpx;
+  width: 260rpx;
+  font-size: 24rpx;
+  border-radius: 30rpx;
+}
+.team_list_sty image{
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 10rpx;
+}

@@ -1,0 +1,117 @@
+page {
+  background-image: none;
+  background: #fff0cd;
+}
+
+.unit {
+  height: 10rpx;
+  background: #fff0cd;
+}
+
+.room_introductory {
+  /* font-weight: bold; */
+  background: #30393c;
+  color: #fff0cd;
+}
+
+.room_code {
+  padding: 30rpx 20rpx;
+  border-bottom: 2rpx solid #fff0cd;
+}
+
+.room_introductory image {
+  width: 110rpx;
+  height: 110rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+
+.room_content {
+  padding: 30rpx 20rpx;
+  font-size: 24rpx;
+}
+
+.allot_list {
+  padding: 0 20rpx;
+}
+
+.allot_item {
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  color: #30393c;
+  background: #fef9e6;
+}
+
+.allot_img {
+  width: 95rpx;
+  height: 95rpx;
+  border-radius: 50%;
+  display: block;
+}
+
+.title {
+  padding: 20rpx 0;
+  font-weight: bold;
+  border-bottom: 2rpx solid #ece7d6;
+}
+
+.allot_content {
+  padding: 20rpx 0;
+}
+
+.allot_detail {
+  padding-left: 10rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.sure_btn {
+  border-top: 1rpx solid #a5a5a5;
+  text-align: center;
+}
+
+.btn1, .btn2 {
+  color: #fff;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+
+.btn1 {
+  background: #fef9e6;
+  color: #30393c;
+}
+
+.btn2 {
+  background: #30393c;
+  color: #fff0cd;
+}
+
+.base {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  /* height: 100rpx; */
+  bottom: 0;
+}
+
+.hint {
+  font-size: 32rpx;
+  font-weight: bold;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.lose {
+  background: #fff;
+  padding: 10rpx 0;
+  background: #30393c;
+}
+
+.tag {
+  padding: 5rpx 20rpx;
+  background: #fff0cd;
+  font-size: 22rpx;
+  border-radius: 16rpx;
+  color: #30393c;
+}

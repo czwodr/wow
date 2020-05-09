@@ -1,0 +1,374 @@
+<view class='main-wraper'>
+  <view class='nav'>
+    <navBar title='创建活动' background='#30393c' color='#fff' back="{{true}}" iconTheme='white' bindback="handlerGobackClick"></navBar>
+  </view>
+
+  <van-popup show="{{transcript_popup}}" position="bottom" custom-style="height: 264px;">
+    <van-picker class="van-picker" columns="{{ transcript }}" bind:confirm="transcriptConfirm" bind:cancel="transcriptCancel" value-key="{{'name'}}" show-toolbar="{{true}}" />
+  </van-popup>
+
+  <view class="main">
+    <view class="info">
+
+      <view class="list_info roomNumber">
+        <view class="flex_vert">
+          <view class="room_title">房间号：{{roomNumber}}</view>
+        </view>
+      </view>
+      <view class="list_info service_info">
+        <view class="list flex_y">
+          <view class="service_name">服务器/阵营</view>
+          <view>{{role_info.service_name}} -
+            <text style="color:#dd021e;">{{role_info.camp_name}}</text>
+          </view>
+        </view>
+        <view class="list flex_y">
+          <view class="input_title">选择副本</view>
+          <view bindtap="set_transcript_popup" class="inputSty">{{transcriptText.name}}</view>
+        </view>
+
+        <!-- 填写装备起拍价格 -->
+        <view class="list flex_y">
+          <view class="input_title">预设装备</view>
+          <view class="inputSty" bindtap="equip_boss_Start">预设装备起拍价格</view>
+          <van-popup show="{{equip_popup}}" position="bottom" z-index="99999">
+            <view class="popup_box boss_box">
+
+              <view class="close" bindtap="close_boss_popup">
+                <image src="../../images/close.png"></image>
+              </view>
+              <view wx:if="{{!select_boss}}">
+                <view class="subsidy_title flex_x boss_title">选择boss</view>
+                <scroll-view scroll-y="{{true}}" class="scroll_h">
+                  <view class="ul_box">
+                    <view wx:for="{{boss_list}}" wx:key="index" class="ul_li" data-index="{{index}}" bindtap="set_select_boss">
+                      <view class="boss_name">{{item.bossChineseName}}</view>
+                      <view class="boss_english">{{item.bossEnglishName}}</view>
+                    </view>
+                  </view>
+                </scroll-view>
+              </view>
+
+
+              <view wx:if="{{select_boss}}">
+                <view class="subsidy_title flex_x boss_title">{{boss_list[boss_index].bossChineseName}}</view>
+
+                <view class="ul_box">
+                  <view class="ul_li flex_sa">
+
+                    <view class="select_class flex_sa flex_y">
+                      <view class="select_icon" bindtap="set_select_equip" data-index="-1">
+                        <view>全选</view>
+                      </view>
+                      <view class="eqiop_icon">
+                        <view>图标</view>
+                      </view>
+                      <view class="eqiop_name">
+                        <view>名称</view>
+                      </view>
+                    </view>
+                    <view class="l1_eqiop">
+                      <view>等级</view>
+                    </view>
+                    <view class="l1_eqiop">
+                      <view>类型</view>
+                    </view>
+                    <view class="eqiop_type" style="color: #07c160;">
+                      <view>币种</view>
+                    </view>
+                    <view class="set_up_input">
+                      <view>价格</view>
+                    </view>
+                  </view>
+                </view>
+                <scroll-view scroll-y="{{true}}" class="scroll_h boss_equip_h">
+                  <view class="ul_box">
+                    <view wx:for="{{boss_list[boss_index].equipment}}" wx:key="index" class="ul_li flex_sa flex_y boss_equip">
+                      <!-- <view class="boss_name">{{item.name}}</view>
+                    <view class="boss_english">{{item.yname}}</view> -->
+
+                      <view bindtap="set_select_equip" data-index="{{index}}" class="select_class flex_sa flex_y">
+                        <view class="select_icon flex_vert">
+                          <view class="icon_sty">
+                            <image src="../../images/hook.png" wx:if="{{item.is_select}}"></image>
+                          </view>
+                        </view>
+                        <view class="eqiop_icon">
+                          <image src="{{item.icon}}"></image>
+                        </view>
+                        <view class="eqiop_name" style="color:{{item.color==1?'#a335ee':item.color==2?'#0070dd':item.color==3?'#ff8000':''}}">
+                          <view>{{item.equipmentChineseName}}</view>
+                          <view class="english_name">{{item.equipmentEnglishName}}</view>
+                        </view>
+                      </view>
+
+                      <view class="l1_eqiop">
+                        <view>{{item.grade}}</view>
+                      </view>
+                      <view class="l1_eqiop">
+                        <view>{{item.type}}</view>
+                      </view>
+                      <view class="eqiop_type">
+                        <image src="../../images/drop.png" class="drop"></image>
+                        <picker bindchange="auction_typeChange" data-index="{{index}}" value="{{item.currency_type}}" range="{{auction_type}}">
+                          <view class="auction_type_picker" style="color: #07c160; font-weight:600">
+                            {{auction_type[item.currency_type]}}
+                          </view>
+                        </picker>
+
+                      </view>
+                      <view class="set_up_input">
+                        <!-- <view>10</view> -->
+                        <input type="number" class="set_up" value="{{item.clap_price}}" bindinput="set_price" data-index="{{index}}"></input>
+                      </view>
+                    </view>
+                  </view>
+                </scroll-view>
+
+                <view class="set_boss_equip">
+                  <view class="set_equip_up flex_sa flex_y">
+                    <view class="set_hook flex_vert" bindtap="set_select_equip" data-index="-1">
+                      <view class="" style="width:80rpx;">
+                        <view class="icon_sty " style="margin:0px auto;">
+                          <image src="../../images/hook.png" wx:if="{{check_all}}"></image>
+                        </view>
+                        <view class="flex_vert">全选</view>
+                      </view>
+                    </view>
+                    <view class="li_qu"></view>
+                    <view class="l1_eqiop eqiop_type" style="width: 190rpx;">
+                      <image src="../../images/drop.png" class="drop"></image>
+
+                      <picker bindchange="auction_typeChange" data-index="-1" value="{{item.currency_type}}" range="{{auction_type}}">
+                        <view class="auction_type_picker" style="color: #07c160;">
+                          <text>选择币种：</text>{{auction_type[auction_typeIndex]}}
+                        </view>
+                      </picker>
+
+                    </view>
+                    <view class="l1_eqiop set_up_input">
+                      <!-- <view>10</view> -->
+                      <input type="number" class="set_up" bindinput="set_check_price"></input>
+                    </view>
+                  </view>
+                  <view class="set_boss_equip_btn" bindtap="set_boss_equip_btn">
+                    确定
+                  </view>
+                </view>
+              </view>
+
+            </view>
+
+          </van-popup>
+        </view>
+
+        <!-- YY房间号 -->
+        <!-- <view class="list flex_y">
+          <view class="input_title">YY房间号</view>
+          <input type="text" class="inputSty" placeholder="请输入YY房间号" placeholder-style="color:#c3c3c3" bindinput="set_yy" value="{{yy_room_number}}"></input>
+        </view> -->
+      </view>
+
+      <van-popup show="{{ subsidyPopup }}" position="bottom" z-index="99999" closeable="{{true}}" bind:close="subsidyPopup_close">
+        <view class="flex_x popup_title" style="background-color: #fff0cd; padding: 20rpx;">补贴设置</view>
+        <scroll-view scroll-y="{{true}}" class="scroll_h" style="background-color: #fff;height: 1100rpx;">
+          <view class="list_info subsidy_box" style="border-radius:0rpx;padding-top:0rpx;">
+            <!-- 补贴方式 -->
+            <view class="list flex" style="margin-top:0rpx;margin-bottom:10rpx;">
+              <view class="radio_title flex-grow-0">补贴方式</view>
+              <view class="ul">
+                <view>
+                  <radio-group class="radio-group" bindchange="subsidiesChange" data-id="0">
+                    <radio class="floorRadio" wx:for="{{subsidies_type}}" wx:key="name" value="{{item.type}}" checked="{{item.checked}}">
+                      <text>{{item.value}}</text>
+                    </radio>
+                  </radio-group>
+                </view>
+                <view style="margin-top:20rpx;">
+                  <radio-group class="radio-group" bindchange="subsidiesChange" data-id="1">
+                    <radio class="floorRadio" wx:for="{{allot_type}}" wx:key="name" value="{{item.type}}" checked="{{item.checked}}">
+                      <text>{{item.value}}</text>
+                    </radio>
+                  </radio-group>
+                </view>
+              </view>
+            </view>
+
+            <view class="subsidies">
+              <view class="unit">
+                <!-- <text>单位/{{subsidies_index==2&&allot_index==2?'元':subsidies_index==1&&allot_index==2?"币":subsidies_index==2&&allot_index==1?'%-元':subsidies_index==1&&allot_index==1?"%-币":''}}</text> -->
+              </view>
+              <view wx:for="{{subsidy_data}}" wx:key="index" class="sub_li flex" wx:for-item="iItem">
+                <view class="sub_name">{{iItem.name}}</view>
+                <view class="sub_ul flex_wrap">
+                  <view class="sub_input" wx:for="{{iItem.list}}" wx:key="index" wx:for-index="idx" style="width:{{iItem.list.length==1?'520rpx;':'95rpx;'}}margin-right:20rpx;">
+                    <!-- <text class="it_name">{{item.name}}</text> -->
+                    <input type="digit" class="subsidiesInput" bindinput="subsidiesInput" value="{{item.value}}" data-index="{{index}}" data-idx="{{idx}}" placeholder="{{index==0?'单位/'+danwei:item.name}}" style="width:100%;font-size:24rpx;"></input>
+                    <text class="flex_vert" wx:if="{{index!=0}}" style="margin-top:10rpx;">{{item.name}}</text>
+                  </view>
+                </view>
+
+              </view>
+            </view>
+
+            <!-- 支出 -->
+            <view class="list flex_y">
+              <view class="radio_title flex-grow-0">合计支出</view>
+              <!-- <input type="digit" class="inputSty" placeholder="请输入支出(固定/{{subsidies_index==2?'元':'币'}})" placeholder-style="color:#c3c3c3" bindinput="set_expenditure"></input> -->
+              <view class="inputSty" style="width:300rpx;margin-left:20rpx;">
+                {{expenditure}}
+              </view>
+              <view style="margin-left:20rpx; font-size:26rpx;">{{danwei}}</view>
+            </view>
+            <!-- 分配条件 -->
+            <view class="list flex">
+              <view class="title flex_vert" style="line-height: 60rpx;width:140rpx;">分配条件</view>
+              <view class="rule" style="margin-left:20rpx;">
+                <view class="flex_y rule_li">
+                  DPS 需高于第
+                  <picker bindchange="outputChange" data-id="DPS" value="{{outputIndex}}" range="{{output}}">
+                    <view class="numpicker">
+                      {{high_dps.key}}
+                    </view>
+                  </picker>名的
+                  <input type="number" class="ruleInput" bindinput="outputInput" data-id="DPS" value="{{high_dps.value}}"></input>%
+                </view>
+                <view class="flex_y rule_li">
+                  HPS 需高于第
+                  <picker bindchange="outputChange" data-id="HPS" value="{{outputIndex}}" range="{{output}}">
+                    <view class="numpicker">
+                      {{high_hps.key}}
+                    </view>
+                  </picker>名的
+                  <input type="number" class="ruleInput" bindinput="outputInput" data-id="HPS" value="{{high_hps.value}}"></input>%
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="confirm_Start" style="margin:0px auto;" bindtap="set_subsidy">确定设置</view>
+        </scroll-view>
+      </van-popup>
+
+
+      <!-- <view class="subsidies flex_wrap">
+        <view wx:for="{{subsidyList}}" wx:key="index" class="subsidies_li flex_y">
+          <view class="li">{{item.name}}</view>
+          <view class="li flex_y">
+            <input type="number" class="subsidiesInput" bindinput="subsidiesInput" value="{{item.value}}" data-index="{{index}}"></input>
+            <text>{{allot_index==1?'%':'元'}}</text>
+          </view>
+        </view>
+      </view> -->
+
+
+
+      <view class="list_info">
+        <!-- 补贴设置 -->
+        <view class="list flex">
+          <view class="title">补贴设置</view>
+          <view class="rule">
+            <radio-group class="radio-group" bindchange="subsidyChange" bindtap="subsidyTap">
+              <radio class="floorRadio" wx:for="{{subsidyData}}" wx:key="name" value="{{item.type}}" checked="{{item.checked}}">
+                <text>{{item.value}}</text>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+        <!-- 地板 -->
+        <view class="list flex">
+          <view class="title">地板价格</view>
+          <view class="rule">
+            <radio-group class="radio-group" bindchange="floorChange" bindtap="floorTap">
+              <radio class="floorRadio" wx:for="{{floor}}" wx:key="name" value="{{item.type}}" checked="{{item.checked}}">
+                <text>{{item.value}}</text>
+              </radio>
+            </radio-group>
+            <van-popup show="{{ floor_popup }}" position="bottom" z-index="99999">
+              <view class="popup_box">
+                <view class="close" bindtap="close_floor_btn">
+                  <image src="../../images/close.png"></image>
+                </view>
+                <view class="flex_x popup_title">设置地板</view>
+                <view class="floor_box">
+                  <view class="flex_y floor_li">
+                    <view>选择币种</view>
+                    <view>
+                      <radio-group class="radio-group" bindchange="floor_way_Change">
+                        <radio class="radio" wx:for="{{floor_way}}" wx:key="name" value="{{item.type}}" checked="{{item.checked}}">
+                          <text>{{item.value}}</text>
+                        </radio>
+                      </radio-group>
+                    </view>
+                  </view>
+                  <view class="flex_y floor_li">
+                    <view>售卖价</view>
+                    <view>
+                      <input type="number" class="ruleInput floorEquipIpunt" placeholder="请输入价格" placeholder-style="color:#bcbcbc" value="{{floor_info.price}}" bindinput="floor_price" data-id="0"></input>
+                    </view>
+                  </view>
+                  <!-- <view class="flex_y floor_li">
+                  <view>次加价</view>
+                  <view>
+                    <input type="number" class="ruleInput floorEquipIpunt" placeholder="每次加价" placeholder-style="color:#bcbcbc" value="{{floor_info.add_price}}" bindinput="floor_price" data-id="1"></input>
+                  </view>
+                </view> -->
+                  <view class="flex_y floor_li">
+                    <view>哪种装备</view>
+                    <view>
+                      <checkbox-group bindchange="floorEquipcheckbox">
+                        <label class="floorEquipcheckbox" wx:for="{{floorEquip}}" wx:key="name">
+                          <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+                        </label>
+                      </checkbox-group>
+                    </view>
+                  </view>
+                  <!-- <view class="flex_y floor_li">
+                  <view>竞价时间</view>
+                  <view>
+                    <picker bindchange="floor_time_Change" data-id="wap" value="{{floor_time_wap_index}}" range="{{floor_time_wap}}">
+                      <view class="floor_time">
+                        {{floor_info.end_time}} 分钟
+                      </view>
+                    </picker>
+                  </view>
+                </view>
+                <view class="flex_y floor_li">
+                  <view>支付时间</view>
+                  <view>
+                    <picker bindchange="floor_time_Change" data-id="pay" value="{{floor_time_pay_index}}" range="{{floor_time_pay}}">
+                      <view class="floor_time">
+                        {{floor_info.pay_end_time}} 分钟
+                      </view>
+                    </picker>
+                  </view> 
+                </view>-->
+                  <view class="set_floor_btn" bindtap="set_floor_btn">
+                    确定
+                  </view>
+                </view>
+              </view>
+            </van-popup>
+          </view>
+        </view>
+      </view>
+
+      <view class="list_info">
+        <!-- 团长备注 -->
+        <view class="flex_vert" wx:if="{{!floor_popup}}">
+          <view class="title" style="width:140rpx;">团长备注:</view>
+          <!-- <input type="text" class="inputSty" placeholder="备注" placeholder-style="color:#000" bindinput="set_yy"></input> -->
+          <textarea bindblur="setNote" auto-height wx:if="{{!transcript_popup}}" value="{{note}}" />
+        </view>
+      </view>
+
+
+
+
+    </view>
+
+    <!-- 填写装备起拍价格 -->
+    <view class="list flex_vert">
+      <view class="confirm_Start" bindtap="confirm_Start">下一步</view>
+    </view>
+  </view>
+</view>

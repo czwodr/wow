@@ -1,0 +1,176 @@
+page {
+  background-color: #30393c;
+}
+
+.jiase {
+  width: 750rpx;
+  height: 140rpx;
+}
+
+input {
+  height: 21px !important;
+  min-height: 21rpx;
+}
+
+.content {
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+
+.msg_list {
+  padding: 0 20rpx;
+  background: #fff0cd;
+  border-radius: 15rpx;
+}
+
+.server_list image {
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+}
+
+.name {
+  padding: 30rpx 0;
+  font-size: 32rpx;
+}
+
+.madel_box {
+  position: fixed;
+  width: 710rpx !important;
+  height: auto !important;
+  min-height: 600rpx;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  min-height: 600rpx;
+  padding-bottom: 80rpx;
+}
+
+.talent, .sel_service, .item_account {
+  border-top: 1rpx solid #e7e7e7;
+}
+
+.sel_career, .sel_service, .talent {
+  padding: 20rpx 0;
+}
+
+.item_camp, .grade, .equipped {
+  padding: 20rpx 0;
+}
+
+.radio {
+  padding-left: 20rpx;
+}
+
+.save {
+  margin: 100rpx auto;
+  width: 490rpx;
+  border-radius: 50rpx;
+  padding: 30rpx 0;
+  background-color: #fff0cd;
+  text-align: center;
+  font-weight: 600;
+}
+
+.sever_title {
+  position: relative;
+  text-align: center;
+  padding: 30rpx 0;
+}
+
+.ser_close {
+  position: absolute;
+  font-size: 32rpx;
+  padding: 30rpx;
+  top: 0rpx;
+  right: 0rpx;
+  /* transform: translateX(-50%); */
+}
+
+.ser_close image {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+}
+
+.server_message {
+  padding: 0 20rpx;
+}
+
+.section {
+  padding: 20rpx 0;
+  border-top: 1rpx solid #e7e7e7;
+  border-bottom: 1rpx solid #e7e7e7;
+}
+
+.server_region_list {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.server_hint {
+  height: 5rpx;
+  width: 60%;
+  margin: 0 auto;
+  background: #30393c;
+  border-radius: 20rpx;
+}
+
+.server_region {
+  text-align: center;
+}
+
+.server-item:first-child {
+  border: none;
+}
+
+.server-item {
+  padding: 30rpx 0;
+  border-top: 1rpx solid #a5a5a5;
+}
+
+.server_sure {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-top: 1rpx solid #e7e7e7;
+  background: #fff;
+  text-align: center;
+  padding: 30rpx 0;
+}
+
+.coupon_checked {
+  color: red;
+}
+
+.camp_select, .camp_list {
+  padding: 0 20rpx;
+}
+
+.camp_list .item {
+  border-top: 1rpx solid #a5a5a5;
+  padding: 20rpx 0;
+}
+
+.camp_select {
+  padding-top: 20rpx;
+  color: red;
+  padding-bottom: 20rpx;
+}
+
+.talent_item {
+  padding-right: 20rpx;
+}
+
+.tribe_title {
+  padding: 20rpx 0 30rpx 0;
+  text-align: center;
+  font-size: 30rpx;
+}

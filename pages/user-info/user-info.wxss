@@ -1,0 +1,151 @@
+
+page {
+  background-image: none;
+  background: #eee;
+}
+
+.block {
+  height: 20rpx;
+}
+
+.user_img {
+  background: #fff;
+  padding: 60rpx 0;
+}
+
+.portrait {
+  width: 162rpx;
+  height: 162rpx;
+  border-radius: 50%;
+  display: block;
+  /* border: 1rpx solid red; */
+  margin: 0 auto;
+}
+
+.port_title {
+  text-align: center;
+  color: #a5a5a5;
+  padding-top: 30rpx;
+}
+
+.user_info {
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  color: #363636;
+  background: #fff;
+}
+
+.user_name, .user_role, .user_phone {
+  padding-right: 20rpx;
+  height: 103rpx;
+}
+
+.user_role, .user_phone {
+  border-top: 1rpx solid #e7e7e7;
+}
+
+.case {
+  width: 200rpx;
+  display: inline-block;
+}
+
+.interest {
+  padding: 0 20rpx;
+  background: #fff;
+  height: 103rpx;
+  line-height: 103rpx;
+}
+
+.edit_name {
+  padding: 30rpx;
+}
+
+.edit_name input {
+  border: 1px solid #d5d5d5;
+  font-size: 28rpx;
+  height: 78rpx;
+  padding-left: 10rpx;
+}
+
+.mobile {
+  padding-top: 190rpx;
+}
+
+.mobile .arrow_left {
+  padding: 20rpx;
+}
+
+.mobile .mobile_text {
+  color: #363636;
+  font-size: 28rpx;
+  padding: 30rpx 50rpx;
+}
+
+.mobile .mobile_text .mb {
+  color: #c34944;
+}
+
+.mobile .mobile_input_box {
+  padding: 20rpx 50rpx;
+}
+
+.mobile .mobile_input_box input {
+  border: 1px solid #e7e7e7;
+  margin-top: 30rpx;
+  height: 88rpx;
+  border-radius: 50rpx;
+  padding-left: 20rpx;
+}
+
+.mobile_input_box .title {
+  color: #363636;
+  font-size: 28rpx;
+}
+
+.button_box {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 50rpx;
+}
+
+.button_box button {
+  width: 300rpx;
+  line-height: 85rpx;
+  padding: 0;
+  border-radius: 50rpx;
+  color: #fff;
+  font-size: 28rpx !important;
+}
+
+.button_box .getphone {
+  width: 300rpx;
+  background-color: #07c160;
+}
+
+.codeNum {
+  position: relative;
+}
+
+.codeNum .count_down {
+  position: absolute;
+  top: 28rpx;
+  right: 20rpx;
+  color: #bababa;
+  font-size: 24rpx;
+  z-index: 99;
+}
+
+.codeNum .van-count-down {
+  display: inline-block;
+  color: #bababa;
+  font-size: 24rpx;
+}
+
+.submitCode {
+  width: 80%;
+  line-height: 85rpx;
+  margin: 30rpx auto;
+  border-radius: 50rpx;
+  color: #fff;
+  background-color: #c34944;
+}

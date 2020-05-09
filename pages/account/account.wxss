@@ -1,0 +1,182 @@
+page {
+  background: #fff0cf;
+}
+
+.main {
+  padding: 0 20rpx;
+  padding-top: 270rpx;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+}
+
+.header {
+  padding-top: 80rpx;
+  width: 100%;
+}
+
+.money_img {
+  width: 107rpx;
+  height: 107rpx;
+  margin: 0 auto;
+  display: block;
+}
+
+.check {
+  text-align: center;
+  color: #edbb34;
+  font-size: 28rpx;
+}
+
+.score_title {
+  padding-top: 20rpx;
+  text-align: center;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.score_number {
+  padding-top: 38rpx;
+  color: #30393c;
+  font-size: 72rpx;
+  text-align: center;
+}
+
+.recharge {
+  padding: 30rpx 0 20rpx 0;
+  font-size: 28rpx;
+  text-align: center;
+  font-weight: bold;
+}
+
+.rech_box {
+  padding: 0 20rpx;
+}
+
+.tab_bar {
+  /* position: fixed; */
+  top: 130rpx;
+  height: 100rpx;
+  width: 100%;
+  background: #fff;
+}
+
+.tab_title {
+  text-align: center;
+}
+
+.line-height {
+  height: 80rpx;
+  width: 1rpx;
+  background: #a5a5a5;
+}
+
+.list {
+  padding: 0 20rpx;
+  background: #fff;
+}
+
+.item {
+  height: 138rpx;
+  border-top: 1rpx solid #e7e7e7;
+}
+
+.popup_content {
+  width: 700rpx;
+  /* height: 300rpx; */
+  padding: 0 20rpx;
+}
+
+.hint {
+  padding: 40rpx 0;
+  /* text-align: center; */
+  font-weight: bold;
+}
+
+.wire {
+  height: 2rpx;
+  background: #eee;
+}
+
+.pay {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30rpx;
+  padding: 20rpx 0;
+  width: 490rpx;
+  margin: 44rpx auto;
+  color: #fff;
+  background: #64b265;
+  border-radius: 45rpx;
+}
+
+.base_btn {
+  position: fixed;
+  width: 100%;
+  bottom: 100rpx;
+}
+
+.bt1, .bt2 {
+  width: 490rpx;
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  font-weight: bold;
+  border-radius: 45rpx;
+  margin: 0 auto;
+}
+
+.bt1 {
+  color: #fff0cd;
+  background: #30393c;
+}
+
+.bt2 {
+  border: 2rpx solid #30393c;
+}
+
+.caption {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  padding: 46rpx 0;
+}
+
+.close {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  top: 20rpx;
+  left: 0;
+}
+
+.caption_money {
+  color: #30393c;
+  font-size: 72rpx;
+  text-align: center;
+}
+
+.way_img {
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+}
+
+.click_code {
+  width: 260rpx;
+  height: 60rpx;
+  text-align: center;
+  font-size: 28rpx;
+  border-radius: 25rpx;
+}
+
+.unclick {
+  color: #bababa;
+  border: 1rpx solid #bababa;
+  pointer-events: none;
+}
+
+.click {
+  color: #3c3c3c;
+  border: 1rpx solid #64b265;
+}

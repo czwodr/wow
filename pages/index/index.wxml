@@ -1,0 +1,36 @@
+<view class="main">
+  <view class="banner">
+    <view class="banner_img">
+      <image src="https://wowgame.yigworld.com/static/img/banner.jpg"></image>
+    </view>
+  </view>
+  <view class="content">
+    <!-- <van-notice-bar
+      left-icon="../../images/tongzhi.png"
+      scrollable="{{false}}"
+      wrapable
+      text="魔兽团吧小程序是一款服务于魔兽怀旧服玩家，帮助团长和团员实现开团入团，道具竞价，金额支付，团队分配的小程序。操作简单，管理方便，过程公正透明不毛利。"
+    /> -->
+
+
+    <view class="notice">
+      更好的金团助手，能够进行现金拍装。实现自动拍装、自动分配、全程透明，现金公账分配，安全便捷，拒绝毛人毛团！！！
+    </view>
+    <view class="creative flex_vert" bindtap="create">
+      <image src="../../images/icon1.png" class="icon"></image>
+      <text>创建活动</text>
+    </view>
+    <view class="join flex_vert" wx:if="{{code_id==0||!code_id}}" bindtap="join_activity">
+      <image src="../../images/icon2.png" class="icon"></image>
+      <text>加入活动</text>
+    </view>
+    <view class="join flex_vert" wx:if="{{code_id==2}}" bindtap="skip" data-url="/pages/room-code/room-code?team_id={{checkUserRoomExit.id}}">
+      <image src="../../images/icon2.png" class="icon"></image>
+      <text>返回活动</text>
+    </view>
+    <view class="join flex_vert" bindtap="skip" data-url="/pages/role/role?id=0">
+      <image src="../../images/icon3.png" class="icon"></image>
+      <text>角色管理</text>
+    </view>
+  </view>
+</view>

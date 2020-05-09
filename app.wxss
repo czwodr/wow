@@ -1,0 +1,283 @@
+/**app.wxss**/
+
+page {
+  position: relative;
+  background-color: #fff0cd;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+
+page, block, view, scroll-view, swiper, movable-view, icon, text, progress,
+button, checkbox, form, input, label, picker, picker-view, radio, slider, switch,
+textarea, navigator, audio, image, video, map, canvas, contact-button {
+  box-sizing: border-box;
+}
+
+button {
+  font-size: 11pt;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-reverse {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.flex-row {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+
+.flex_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex_end {
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-end;
+}
+
+.flex_vert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex_sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+flex_shrink {
+  flex-shrink: 0;
+}
+
+.flex_y {
+  display: flex;
+  align-items: center;
+}
+
+.flex_x {
+  display: flex;
+  justify-content: center;
+}
+
+.flex_sa {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-col {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+}
+
+.flex-grow-0 {
+  min-width: 0;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.flex-grow-1 {
+  min-width: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.setIphoneX {
+  padding-bottom: 20rpx;
+}
+
+/* 弹框 */
+
+.popup {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 99999;
+}
+
+.popup .popup_bj {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: showbj 0.2s linear forwards;
+}
+
+.popup .popup_box {
+  position: fixed;
+  width: 100%;
+  min-height: 400rpx;
+  background-color: #fff;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  animation: showbox 0.4s linear forwards;
+}
+
+.popup_title {
+  padding: 30rpx;
+}
+
+.close {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 25rpx;
+  right: 10rpx;
+}
+
+.close image {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 10rpx;
+}
+
+@keyframes showbj {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showbox {
+  0% {
+    bottom: -50%;
+  }
+
+  100% {
+    bottom: 0%;
+  }
+}
+
+/* 弹框 */
+
+/* 职业颜色 */
+
+/* 战士 */
+
+.warrior_color {
+  color: #964b00;
+}
+
+/* 牧师 */
+
+.priest_color {
+  color: #fff;
+}
+
+/* 法师 */
+
+.mage_color {
+  color: #0080ff;
+}
+
+/* 盗贼 */
+
+.thieves_color {
+  color: #ff0;
+}
+
+/* 猎人 */
+
+.hunter_color {
+  color: #0f0;
+}
+
+/* 术士 */
+
+.warlock_color {
+  color: #800080;
+}
+
+/* 德鲁伊 */
+
+.druids_color {
+  color: #fa8072;
+}
+
+/* 圣骑士、萨满祭司 */
+
+.knight_color {
+  color: #ffc0cb;
+}
+
+/* 职业颜色 */
+
+.text-more {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.text-more-2 {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.text-more-3 {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.text-more-n {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}

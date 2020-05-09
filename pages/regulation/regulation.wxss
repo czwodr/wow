@@ -1,0 +1,106 @@
+page {
+  background: #30393c;
+}
+
+.lxy-nav-bar {
+  background-color: transparent !important;
+}
+
+.back_img {
+  width: 100%;
+  height: 140rpx;
+}
+
+.room_code {
+  font-size: 32rpx;
+  padding: 10rpx 0;
+  color: #fff0cd;
+  text-align: center;
+}
+
+.content {
+  padding: 0 14rpx;
+  position: relative;
+}
+
+.content image {
+  width: 724rpx;
+  height: 728rpx;
+  margin: 0 auto;
+  display: block;
+}
+
+.subject {
+  position: absolute;
+  top: 0;
+  color: #30393c;
+  font-size: 24rpx;
+  box-sizing: border-box;
+  left: 0;
+  padding: 50rpx 60rpx;
+  height: 728rpx;
+  line-height: 40rpx;
+}
+
+.transcript {
+  padding-bottom: 10rpx;
+}
+
+.item {
+  padding: 2rpx 8rpx;
+  height: 33rpx;
+  text-align: center;
+  line-height: 33rpx;
+  border-radius: 10rpx;
+  font-size: 20rpx;
+  margin: 0 10rpx 10rpx 0;
+  background: #d4b681;
+}
+
+.protocol {
+  padding-top: 50rpx;
+  text-align: center;
+  font-weight: bold;
+}
+
+.protocol image {
+  width: 31rpx;
+  height: 31rpx;
+  display: block;
+}
+
+.noneActive {
+  background: #a5a5a5 !important;
+  color: #fff !important;
+  pointer-events: none;
+}
+
+.btn_list {
+  padding-top: 45rpx;
+}
+
+.btn1, .btn2 {
+  width: 240rpx;
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  border-radius: 45rpx;
+}
+
+.btn1 {
+  border: 1rpx solid #fff0cd;
+  color: #fff0cd;
+}
+
+.btn2 {
+  background: #fff0cd;
+  color: #30393c;
+}
+
+.title {
+  padding: 20rpx 0;
+  text-align: center;
+  border-bottom: 1rpx solid #ccc;
+  color: #000;
+  font-weight: bold;
+}

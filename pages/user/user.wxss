@@ -1,0 +1,114 @@
+.header {
+  height: 379rpx;
+  background-color: #30393c;
+  position: relative;
+  /* border-bottom-right-radius: 20rpx; */
+  border-bottom-left-radius: 30rpx;
+}
+
+.user-info {
+  position: absolute;
+  left: 40rpx;
+  bottom: 30rpx;
+  width: 710rpx;
+}
+
+.r_icon {
+  width: 12rpx;
+  height: 19rpx;
+}
+
+.personal {
+  margin-top: 30rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+}
+
+.message {
+  background: #30393c;
+  border-radius: 15rpx;
+  padding: 0 20rpx;
+}
+
+.user_img {
+  padding: 30rpx 0;
+}
+
+.avatar {
+  width: 180rpx;
+}
+
+.account {
+  flex: 1;
+  margin-left: 30rpx;
+}
+
+.account .name {
+  color: #fefefe;
+  font-weight: 600;
+  font-size: 38rpx;
+  margin-top: 5rpx;
+  margin-bottom: 28rpx;
+  padding-left: 20rpx;
+}
+
+.account .balance {
+  color: #fff0cd;
+  background-image: -webkit-linear-gradient(0deg, rgb(49, 83, 94) 0%, rgb(48, 57, 60) 100%);
+  height: 77rpx;
+  line-height: 77rpx;
+  padding-left: 34rpx;
+  border-top-left-radius: 38.5rpx;
+  border-bottom-left-radius: 38.5rpx;
+  margin-top: 15rpx;
+  font-size: 28rpx;
+}
+
+.portrait {
+  width: 176rpx;
+  height: 176rpx;
+  display: block;
+  margin-right: 30rpx;
+  border-radius: 50%;
+  box-shadow: 0px 3px 7px 0px rgb(29, 32, 32);
+  margin: 0px auto;
+}
+
+.message-item:first-child {
+  border: none;
+}
+
+.message-item {
+  padding: 30rpx 20rpx;
+  border-top: 1rpx solid rgba(255, 240, 205, 0.8);
+  color: #fff0cd;
+  font-size: 28rpx;
+}
+
+.not_log {
+  position: absolute;
+  left: 20rpx;
+  bottom: 20rpx;
+  width: 710rpx;
+  color: #fff0cd;
+  font-size: 24rpx;
+}
+
+.not_log image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.log_out {
+  padding-top: 10rpx;
+  text-align: center;
+}
+
+.vertical {
+  height: 90rpx;
+  width: 2rpx;
+  background: #a5a5a5;
+}

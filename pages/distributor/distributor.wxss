@@ -1,0 +1,141 @@
+page{
+  background-color: #30393C;
+}
+
+.content {
+  padding: 0 20rpx;
+}
+
+.cash_content {
+  background-image: linear-gradient(135deg, #855150, #571d15 70%, #5e250e);
+  border-radius: 15rpx;
+  padding: 20rpx;
+  margin-top: 60rpx;
+}
+
+.cash_money {
+  font-size: 40rpx;
+  font-weight: bold;
+  padding-left: 10rpx;
+  color: #ffd100;
+}
+
+.start {
+  background-image: linear-gradient(135deg, #2c0403, #350802 70%, #2e0d00);
+  box-shadow: 0 3px 6px 0 rgba(36, 6, 2, 0.2);
+  color: #f7b10a;
+  border-radius: 10rpx;
+  padding: 30rpx 0;
+  margin: 50rpx 0;
+  text-align: center;
+}
+
+.cash_list {
+  height: 300rpx;
+  width: 100%;
+}
+
+.record_box .title {
+  color: #000;
+}
+
+.scroll_record {
+  height: 300rpx;
+  margin-top: 10rpx;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 20rpx;
+}
+
+.record_li {
+  margin-bottom: 10rpx;
+  color: #b4b4b4;
+}
+
+.record_li .cover_box {
+  width: 50rpx;
+}
+
+.record_li .cover_box .cover {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.record_box .name {
+  width: 300rpx;
+  font-size: 24rpx;
+}
+
+.record_box .timer {
+  font-size: 22rpx;
+  width: 300rpx;
+  text-align: center;
+}
+
+.record_box .price {
+  width: 150rpx;
+  font-size: 22rpx;
+  text-align: center;
+  color: #ffd100;
+}
+
+.pat_price_box {
+  margin-top: 60rpx;
+}
+
+.pat_price {
+  width: 100%;
+  height: 80rpx;
+  background: #b4b4b4;
+  border-radius: 40rpx;
+  text-align: center;
+}
+
+.note {
+  color: #f7b10a;
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.set_pat {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #190f00;
+  color: #f7b10a;
+  border-radius: 10rpx;
+  margin-top: 80rpx;
+}
+
+.pat_box .type {
+  padding: 2rpx 10rpx;
+  background-color: #b4b4b4;
+  font-size: 22rpx;
+  margin-left: 20rpx;
+  color: #000;
+  border-radius: 8rpx;
+}
+
+.pat_count_down {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+}
+
+.pat_count_down .van-count-down {
+  color: #f7b10a;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+
+.pat_count_down .timer {
+  font-size: 24rpx;
+}
+
+.empty_list {
+  margin: 10rpx 20rpx;
+  background-color: #fff;
+  font-size: 24rpx;
+  line-height: 300rpx;
+  text-align: center;
+}

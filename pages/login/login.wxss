@@ -1,0 +1,167 @@
+
+.nav {
+  height: 0;
+}
+
+.login {
+  background: #fff;
+  height: 100vh;
+}
+
+.login-btn {
+  border: none;
+  width: 680rpx !important;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #64b265;
+  color: #fff;
+  font-size: 11pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn::after {
+  display: none;
+}
+
+.login-btn.button-hover {
+  box-shadow: inset 0 5rpx 30rpx rgba(0, 0, 0, 0.15);
+}
+
+.modal {
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  overflow: hidden;
+}
+
+.content {
+  width: 540rpx;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999;
+  border-radius: 25rpx;
+}
+
+.title {
+  padding: 20rpx 0;
+  text-align: center;
+  border-bottom: 1rpx solid #ccc;
+  color: #000;
+  font-weight: bold;
+}
+
+.middle_box {
+  text-align: center;
+  padding: 0 40rpx;
+}
+
+.midd_top {
+  font-size: 28rpx;
+  padding: 20rpx 0;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.midd_top image {
+  width: 128rpx;
+  height: 128rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.midd_bottom {
+  font-size: 24rpx;
+  color: #888;
+  padding: 20rpx 0 50rpx 0;
+}
+
+.is_buotton {
+  border-top: 1rpx solid #ccc;
+}
+
+.down {
+  padding: 20rpx 0;
+  text-align: center;
+  border-right: 1rpx solid #ccc;
+}
+
+.getphone {
+  border: none;
+  width: 68rpx !important;
+  background: none;
+  line-height: none;
+  color: #04be01;
+  padding: 0;
+}
+
+.login-turn {
+  /* border: none; */
+  height: 88rpx;
+  line-height: 88rpx;
+  /* background: #04be01; */
+  border: 1rpx solid #888;
+  color: #000;
+  font-size: 11pt;
+  text-align: center;
+  border-radius: 999rpx;
+}
+
+button::after {
+  border: none;
+}
+
+.legal {
+  position: fixed;
+  bottom: 80rpx;
+  left: 0px;
+  width: 100%;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.van-checkbox__label {
+  margin-left: 10rpx !important;
+  color: #a5a5a5 !important;
+  font-size: 28rpx;
+}
+
+.van-checkbox {
+  align-items: center;
+}
+
+.legal_text {
+  font-size: 28rpx;
+  color: #ffc76e;
+}
+
+.legal_fill .title {
+  font-size: 28rpx;
+  color: #363636;
+  text-align: center;
+  line-height: 70rpx;
+  padding: 10rpx 0px;
+  border-bottom: 1px solid #eee;
+}
+
+.article {
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+
+.login image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

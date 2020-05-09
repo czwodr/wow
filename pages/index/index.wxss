@@ -1,0 +1,64 @@
+.banner {
+  height: 320rpx;
+  background-color: #30393c;
+  position: relative;
+  border-bottom-right-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+}
+
+.banner_img {
+  position: absolute;
+  top: 50%;
+  left: 20rpx;
+  width: 710rpx;
+  height: 262rpx;
+  border-radius: 20rpx;
+  background-color: rgb(200, 188, 161);
+  box-shadow: 0px 2px 8px #000;
+}
+
+.banner_img image {
+  width: 100%;
+  border-radius: 20rpx;
+  height: 100%;
+}
+
+.content {
+  margin-top: 128rpx;
+  margin-bottom: 60rpx;
+}
+
+.creative, .join {
+  width: 350rpx;
+  height: 120rpx;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #30393c;
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.69), inset 0px 2px 5px 0px rgba(0, 0, 0, 0.42);
+  font-size: 32rpx;
+  color: #fff0cd;
+  text-shadow: 0px 3px 5px rgba(65, 46, 11, 0.69);
+  font-weight: 500;
+  margin: 70rpx auto 0rpx auto;
+}
+
+.icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+
+.notice {
+  color: #fff0cd;
+  padding: 20rpx;
+  background-color: #30393c;
+  border-radius: 20rpx;
+  width: 710rpx;
+  margin: 0rpx auto;
+  font-size: 24rpx;
+  text-indent: 48rpx;
+}
+
+.van-icon {
+  font-size: 22px !important;
+}

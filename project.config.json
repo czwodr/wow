@@ -1,0 +1,181 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": false,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.3",
+	"appid": "wxa07d866227c5c901",
+	"projectname": "%E5%8A%A9%E6%89%8B%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "创建房间",
+					"pathName": "pages/creative/creative",
+					"query": "template_id=-1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "角色添加",
+					"pathName": "pages/role-creation/role-creation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "金币分配",
+					"pathName": "pages/distributor/distributor",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "房间页面",
+					"pathName": "pages/room-code/room-code",
+					"query": "team_id=80",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ios 支付",
+					"pathName": "pages/ios-pay/ios-pay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "账单",
+					"pathName": "pages/bill/bill",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "角色创建",
+					"pathName": "pages/role-creation/role-creation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的角色",
+					"pathName": "pages/role/role",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "问题",
+					"pathName": "pages/feedback/feedback",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "pages/user/user",
+					"pathName": "pages/user/user",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/creative/creative",
+					"pathName": "pages/creative/creative",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "开团模板",
+					"pathName": "pages/template/template",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "房间规则",
+					"pathName": "pages/regulation/regulation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "账户余额",
+					"pathName": "pages/account/account",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/regulation/regulation",
+					"pathName": "pages/regulation/regulation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/role-creation/role-creation",
+					"pathName": "pages/role-creation/role-creation",
+					"query": "team_id=80",
+					"scene": null
+				}
+			]
+		}
+	}
+}

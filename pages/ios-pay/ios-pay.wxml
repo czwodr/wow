@@ -1,0 +1,18 @@
+<view>
+  <view class='nav'>
+    <navBar title='ios 充值问题' background='rgba(0, 0, 0, 0)' back="{{true}}" bindback="handlerGobackClick"></navBar>
+  </view>
+  <!-- <view class="ios_pay">
+    <view class="text">
+      虚拟支付是指购买非实物商品，摸不到的物品。比如：游戏道具、VIP会员、充值虚拟币、在线课程、在线音频视频等虚拟产品。目前iOS端暂不支持虚拟支付。
+    </view>
+  </view> -->
+  <view class="ios_pay">
+    <view class="title">解决方案</view>
+    <view class="ios_qr">
+      <image src="{{url}}" mode="scaleToFill" bindtap="previewImg"></image>
+    </view>
+    <view class="ios_prompt">提示：保存图片、扫码，解决问题</view>
+    <!-- <view class="ios_prompt" style="font-size:28rpx;margin-top:20rpx;">点击二维码保存图片，微信识别</view> -->
+  </view>
+</view>

@@ -1,0 +1,130 @@
+<view class='nav'>
+  <navBar title='角色添加' background='#30393C' back="{{true}}" iconTheme='white' color="#fff" bindback="handlerGobackClick"></navBar>
+</view>
+
+<image src="https://wowgame.yigworld.com/static/img/jiase.png" class="jiase"></image>
+<view class="content">
+  <view class="msg_list">
+    <view class="item name flex_y">
+      <view style="margin-right: 10rpx;">游戏角色名</view>
+      <view class="flex_vert">
+        <input placeholder="限制15个字" bindinput="gain_name" value="{{game_name}}" style="font-size:28rpx;" />
+      </view>
+    </view>
+    <view class="sel_service flex_sb">
+      <view>服务器</view>
+      <view bindtap="show_sel" class="flex-grow-1" style="text-align:right;">
+        <view wx:if="{{selec_sever}}">{{selec_sever.name}}{{selec_sever.type}}</view>
+        <view wx:else>请选择服务器</view>
+      </view>
+    </view>
+    <view class="item_career">
+      <view class="sel_career flex_sb">
+        <view>阵营-种族-职业</view>
+        <view class="flex-grow-1" bindtap="show_tribe" style="text-align:right;">
+          <view wx:if="{{selectItemArr.length != 0}}">{{selectItemArr[0].name}} {{selectItemArr[1].name}} {{selectItemArr[2].name}}</view>
+          <view wx:else>请选择</view>
+        </view>
+        <!-- <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <view class="picker">
+            当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}
+          </view>
+        </picker> -->
+      </view>
+    </view>
+    <view class="talent flex_sb">
+      <view>天赋</view>
+      <view class="flex-grow-1" style="text-align:right;">
+        <picker wx:if="{{talent_list}}" bindchange="tralentChange" value="{{talent_index}}" range="{{talent_list}}" range-key="name">
+          <view class="picker">
+            当前选择：{{talent_list[talent_index].name}}
+          </view>
+        </picker>
+        <view wx:else bindtap="hint">请选择</view>
+      </view>
+    </view>
+    <view class="item_account">
+      <view class="grade flex_sb">
+        <view>等级</view>
+        <picker class="flex-grow-1" bindchange="bindPickerChange" value="{{grade_index}}" range="{{grade}}">
+          <view class="picker" style="text-align:right;">
+            当前选择：{{grade[grade_index]}}
+          </view>
+        </picker>
+      </view>
+      <view class="equipped flex_sb">
+        <view>装备评分</view>
+        <view class="flex-grow-1" style="text-align:right;">
+          <input placeholder="请输入装备评分" type="number" style="text-align:right;" bindinput="rank" value="{{new_rank}}" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="save" bindtap="increase">保存</view>
+<view class="popup" wx:if="{{show_madel}}">
+  <view class="popup_bj" bindtap="show_sel"></view>
+  <view class="madel_box">
+    <view class="box">
+      <view class="sever_title">
+        <view>请选择服务器</view>
+        <view class="ser_close" bindtap="show_sel">
+          <image src="/images/close.png"></image>
+        </view>
+      </view>
+      <view class="server_message">
+        <view class="flex_sb server_region_list">
+          <view class="flex-grow-1 server_region" wx:for="{{server_list}}" wx:key="index" bindtap="server_cut" data-index="{{index}}">
+            <view>{{item.name}}</view>
+            <view class="server_hint" wx:if="{{ server_index == index}}"></view>
+          </view>
+        </view>
+        <view class="section flex_y">
+          <view style="padding-right:10rpx;">搜索</view>
+          <input placeholder="请输入关键字" bindinput="search"></input>
+        </view>
+        <view class="server_list">
+          <scroll-view scroll-y="{{true}}" style="max-height:600rpx;" scroll-top="{{scrollTop}}">
+            <view wx:for="{{server_list[server_index].list}}" wx:key="index" class="server-item flex_sb flex_y" bindtap="select_server" data-index="{{index}}">
+              <view>{{item.name}} {{item.type}}</view>
+              <view>
+                <image wx:if="{{item.checked}}" src="../../images/checked.png"></image>
+                <image wx:else src="../../images/unchecked.png"></image>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+
+      </view>
+      <view class="server_sure" bindtap="server_save">确定</view>
+    </view>
+  </view>
+</view>
+<view class="popup" wx:if="{{show_tribe}}">
+  <view class="popup_bj" bindtap="show_tribe"></view>
+  <view class="madel_box">
+    <view class="tribe_title">选择阵营</view>
+    <view class="camp_select flex">
+      <view class="talent_item" bindtap="tab_select" data-index="{{0}}">{{tribetemArr[0]}}</view>
+      <view class="talent_item" bindtap="tab_select" data-index="{{1}}">{{tribetemArr[1]}}</view>
+      <view class="talent_item" bindtap="tab_select" data-index="{{2}}">{{tribetemArr[2]}}</view>
+    </view>
+    <view class="camp_list">
+      <view class="" wx:if="{{currentItem == 0}}">
+        <scroll-view>
+          <view class="item" wx:for="{{arr1}}" wx:key="index" bindtap="scrollNext" data-item="{{item}}">{{item.name}}</view>
+        </scroll-view>
+      </view>
+      <view class="" wx:if="{{currentItem == 1}}">
+        <scroll-view>
+          <view class="item" wx:for="{{arr2}}" wx:key="index" bindtap="scrollNext" data-item="{{item}}">{{item.name}}</view>
+        </scroll-view>
+      </view>
+      <view class="" wx:if="{{currentItem == 2}}">
+        <scroll-view>
+          <view class="item" wx:for="{{arr3}}" wx:key="index" bindtap="scrollNext" data-item="{{item}}">{{item.name}}</view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

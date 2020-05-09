@@ -1,0 +1,75 @@
+<view class='nav'>
+  <navBar title='微信授权' background='rgba(0, 0, 0, 0.5)' color='#fff' back="{{true}}" iconTheme='white' bindback="handlerGobackClick"></navBar>
+</view>
+<view class="login">
+  <image src="https://wowgame.yigworld.com/static/img/log_back.jpg" />
+  <view class="after-navber">
+    <!-- 
+    <van-popup show="{{ legal_show }}" bind:close="legalClose" position="bottom" round custom-style="height: 1100rpx" closeable="true">
+      <view class="legal_fill">
+        <view class="title">
+          《法律声明及隐私政策》
+        </view>
+        <scroll-view scroll-y="true" style="height: 1000rpx;">
+          <view class="article">
+            <rich-text nodes="{{mes_content}}" />
+          </view>
+        </scroll-view>
+      </view>
+    </van-popup> -->
+    <view class="popup" wx:if="{{legal_show}}">
+      <view class="popup_bj" bindtap="legalClose"></view>
+      <view class="popup_box">
+        <view class="popup_title title">
+          《法律声明及隐私政策》
+        </view>
+        <scroll-view scroll-y="true" style="height: 1000rpx;">
+          <!-- <view class="article">
+            <rich-text nodes="{{mes_content}}" />
+          </view> -->
+          <view>
+            <image src="https://wowgame.yigworld.com/static/img/agreement/{{index+1}}.png" wx:for="{{17}}" wx:key="index" style="width:750rpx;height:1192rpx;"></image>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="legal">
+      <button bindgetuserinfo="getUserInfo" class="login-btn" openType="getUserInfo" disabled="{{!legalchecked}}" style="background:{{legalchecked?'#64b265':'#AAAAAA'}};color:#fff">
+        <van-icon name="../../images/icon_vx@3x.png" size="45rpx" color="#fff" /> 微信用户一键登录
+      </button>
+      <view class="flex_vert" style="padding-top:50rpx;">
+        <van-checkbox value="{{ legalchecked }}" shape="round" bind:change="legalChange" checked-color="#FFC76E" icon-size="30rpx">
+          已阅读并同意
+        </van-checkbox>
+        <view class="legal_text" bindtap="go_legal_show">
+          《法律声明及隐私政策》
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{show_madel}}">
+    <view class='modal' />
+    <view class='content'>
+      <view class='title'>微信授权</view>
+      <view class='middle_box'>
+        <view class='midd_top'>
+          <view style="width:80rpx;height:80rpx;margin:0rpx auto;">
+            <image src='https://yig-game.oss-cn-hangzhou.aliyuncs.com/uploads/image/29/29c1e657f770d69ed94e64e790d721ab.png' />
+          </view>
+          <view style='padding-top:20rpx;'>
+            微信授权成功
+          </view>
+        </view>
+        <view class='midd_bottom'>授权绑定你的手机号</view>
+      </view>
+      <view class='is_buotton flex_sb flex_y'>
+        <view class='down flex-grow-1' bindtap='refuse'>
+          拒绝
+        </view>
+        <view class='flex-grow-1'>
+          <button class='getphone' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">允许</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

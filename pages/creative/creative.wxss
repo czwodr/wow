@@ -1,0 +1,439 @@
+
+page{
+  background-color: #30393c;
+}
+/* .lxy-nav-bar {
+  background-color: transparent !important;
+} */
+
+.main .info {
+  margin: 0 20rpx;
+  padding: 15rpx 10rpx;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  color: #30393c;
+}
+
+/* .main .info .list {
+  margin-bottom: 20rpx;
+} */
+.roomNumber{
+  border-radius: 100rpx;
+}
+.roomNumber .room_title{
+  font-weight: 600;
+}
+.list_info{
+  background-color: #fff0cd;
+  padding: 28rpx 20rpx;
+  border-radius: 18rpx;
+  margin-bottom: 20rpx;
+}
+
+
+
+.service_info .list{
+  margin-bottom: 30rpx;
+}
+.service_info .service_name{
+  width: 180rpx;
+}
+.service_info .input_title{
+  width: 130rpx;
+}
+.service_info .inputSty{
+  background-color: #ffffff;
+  height: 82rpx !important;
+  border-radius: 100rpx;
+  line-height: 82rpx;
+  border-bottom:0 !important;
+  text-align: center;
+}
+.service_info .radio_title{
+  width: 120rpx;
+}
+
+
+.subsidy_box .title{
+  width: 80rpx !important;
+  text-align: center;
+}
+.subsidy_box .inputSty{
+  background-color: #ffffff;
+  height: 70rpx !important;
+  border-radius: 100rpx;
+  line-height: 70rpx;
+  border-bottom:0 !important;
+  text-align: center;
+}
+.main .info .list{
+  margin-top: 20rpx;
+}
+.main .info .list .inputSty {
+  width: 500rpx;
+  border-bottom: 1px solid #bcbcbc;
+  color: #000;
+  height: 42rpx;
+  font-size: 24rpx;
+}
+
+.picker {
+  flex: 0.9;
+  height: 46rpx;
+  line-height: 46rpx;
+  border-bottom: 1px solid #bcbcbc;
+}
+
+.main .info .list .li {
+  padding: 4rpx 18rpx;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #f7b10a;
+  border: 1px solid #c77e19;
+  font-size: 24rpx;
+  height: 46rpx;
+}
+
+.subsidy_title {
+  padding: 30rpx;
+}
+
+.add_type {
+  padding: 0px 30rpx;
+}
+
+.add_type .sli {
+  padding: 6rpx 18rpx;
+  border: 1px solid #eee;
+  color: #000;
+  margin-right: 25rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  font-size: 24rpx;
+}
+
+.add_type .selected {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #f7b10a;
+  border: 1px solid #c77e19;
+}
+
+radio {
+  margin-left: 20rpx;
+}
+
+radio .wx-radio-input {
+  height: 32rpx;
+  width: 32rpx;
+  border: 2rpx solid #999;
+  background: #fff;
+  border-radius: 50%; /* 圆角 */
+  
+}
+
+.subsidy_ul {
+  padding: 30rpx;
+}
+
+.subsidy_ul .tit {
+  width: 160rpx;
+  text-align: right;
+  padding-right: 10rpx;
+}
+
+.subsidy_ul .subsidy_li {
+  margin-bottom: 15rpx;
+}
+
+.subsidy_ul .inputSty {
+  flex: 0.7 !important;
+  border-bottom: 1px solid #bcbcbc !important;
+  text-align: center;
+}
+
+.subsidy_btn {
+  margin: 20rpx;
+  background-color: #2a211c;
+  color: #b4a586;
+  font-size: 28rpx;
+}
+
+.lie {
+  margin-bottom: 20rpx;
+  margin-right: 20rpx;
+}
+
+.rule .ruleInput {
+  width: 100rpx;
+  height: 60rpx;
+  background-color: #fff;
+  margin: 0rpx 10rpx;
+  text-align: center;
+  font-size: 24rpx;
+  border-radius: 50rpx;
+}
+
+.rule .rule_li {
+  margin-bottom: 10rpx;
+}
+
+.numpicker {
+  height: 34rpx;
+  width: 34rpx;
+  background-color: #fff;
+  text-align: center;
+  margin: 0px 10rpx;
+  font-size: 24rpx;
+  border-bottom: 1px solid #000;
+}
+
+.floorRadio .wx-radio-input {
+  width: 36rpx;
+  height: 36rpx;
+  border: 2rpx solid #999;
+  border-radius: 50%;
+  background: #fff0cd;
+}
+
+.floorEquipcheckbox {
+  margin-left: 20rpx;
+}
+.floorEquipIpunt {
+  width: 100% !important;
+  font-size: 24rpx;
+  border: 1px solid #bbb;
+  margin-left: 40rpx !important;
+  height: 80rpx !important;
+}
+
+.floorEquipcheckbox .wx-checkbox-input {
+  height: 30rpx;
+  width: 30rpx;
+  border: 2rpx solid #999;
+  background: #fff;
+  border-radius: 8rpx; /* 圆角 */
+}
+
+.equip_Start {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #f7b10a;
+  border: 1px solid #c77e19;
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 78rpx;
+  text-align: center;
+  width: 400rpx;
+  margin-top: 20rpx;
+}
+
+.confirm_Start {
+  background-color: #fff0cd;
+  color: #30393c;
+  font-size: 26rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  width: 520rpx;
+  margin-top: 40rpx;
+  border-radius: 100rpx;
+  margin-bottom: 100rpx;
+
+}
+
+.boss_title {
+  color: #fff;
+  border-bottom: 1px solid #190f00;
+}
+
+.boss_box {
+  background-color: #2d2d2d !important;
+}
+
+.scroll_h {
+  height: 1082rpx;
+  background-color: #2d2d2d;
+}
+
+.boss_equip_h {
+  height: 780rpx;
+}
+
+.boss_equip {
+  font-size: 24rpx;
+}
+
+.ul_box .ul_li {
+  background-color: #190f00;
+  color: #ffd100;
+  text-align: center;
+  padding: 20rpx 0px;
+  border-bottom: 1px solid #2d2d2d;
+}
+.select_class{
+  width: 350rpx;
+}
+.eqiop_name {
+  width: 190rpx;
+}
+
+.eqiop_name .english_name {
+  font-size: 22rpx;
+}
+.eqiop_icon {
+  width: 80rpx;
+  text-align: center;
+}
+.eqiop_icon image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.l1_eqiop {
+  width: 80rpx;
+  position: relative;
+}
+
+.select_icon {
+  width: 80rpx;
+}
+.li_eqiop_type{
+  width: 106rpx;
+}
+.icon_sty {
+  width: 30rpx;
+  height: 30rpx;
+  border: 1px solid #fff;
+  position: relative;
+  border-radius: 5rpx;
+}
+
+.icon_sty image {
+  position: absolute;
+  top: -5rpx;
+  left: -5rpx;
+  width: 37rpx;
+  height: 37rpx;
+}
+
+.set_up {
+  width: 90rpx;
+  height: 34rpx;
+  background-color: #fff;
+  margin: 0px auto;
+  color: #000;
+  text-align: center;
+  font-size: 24rpx;
+}
+.set_boss_equip {
+  width: 100%;
+}
+.set_boss_equip .set_hook {
+  height: 100rpx;
+  color: #fff;
+  width: 80rpx;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+.set_hook text {
+  font-size: 24rpx;
+  text-align: center;
+  padding-top: 8rpx;
+  padding-left: 10rpx;
+}
+.li_qu {
+  width: 340rpx;
+}
+.set_boss_equip .set_boss_equip_btn {
+  text-align: center;
+  line-height: 120rpx;
+  color: #ffd100;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.auction_type_picker {
+  color: #ffd100;
+  font-size: 24rpx;
+}
+.drop {
+  width: 16rpx;
+  height: 16rpx;
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+}
+.eqiop_type {
+  width: 100rpx;
+  position: relative;
+}
+.set_up_input {
+  width: 140rpx;
+}
+
+.floor_box {
+  padding: 30rpx;
+}
+.floor_li {
+  margin-bottom: 30rpx;
+}
+.set_floor_btn {
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  color: #ffd100;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 80rpx 0;
+  border-radius: 100rpx;
+}
+.floor_time {
+  margin-left: 30rpx;
+}
+/* 补贴方式 */
+.subsidies {
+  position: relative
+}
+.unit{
+  position: absolute;
+  right: 5rpx;
+  top: 5rpx;
+  font-size: 24rpx;
+}
+.subsidies .sub_li{
+  margin-top: 10rpx;
+}
+.subsidies_li {
+  width: 315rpx;
+  font-size: 24rpx;
+  height: 50rpx;
+}
+.subsidies_li .li {
+  flex: 1;
+}
+.subsidiesInput {
+  height: 60rpx;
+  background-color: #fff;
+  border-radius:20rpx;
+  text-align: center; 
+  margin-right: 20rpx;
+}
+
+.van-picker{
+  width: 100%;
+}
+.van-ellipsis{
+ font-size: 24rpx;
+}
+
+.sub_name{
+  width: 130rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.sub_ul{
+  flex: 1;
+}
+.sub_input{
+  margin-bottom: 15rpx;
+}
+.sub_input text{
+ font-size: 22rpx;
+}
+.it_name{
+  width: 50rpx;
+}

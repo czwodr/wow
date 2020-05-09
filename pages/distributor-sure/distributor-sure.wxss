@@ -1,0 +1,74 @@
+
+.content {
+  position: relative;
+  padding: 0 20rpx;
+}
+
+.allot_item {
+  padding: 0 20rpx;
+  background: #fff; 
+}
+
+.allot_box:first-child {
+  border: none;
+}
+
+.allot_box {
+  padding: 25rpx 0;
+  border-top: 1rpx solid #a5a5a5;
+}
+
+.allot_box .img {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 50%;
+}
+
+.grant {
+  height: 90rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 90rpx;
+  background: #fff;
+  margin-top: 80rpx;
+}
+
+.popup_content {
+  width: 700rpx;
+  height: 300rpx;
+  padding: 0 20rpx;
+}
+
+.hint {
+  padding: 20rpx 0;
+  text-align: center;
+}
+
+.pay {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30rpx;
+  padding: 20rpx 0;
+  border-radius: 15rpx;
+  color: #fff;
+  background: #64b265;
+  margin-top: 50rpx;
+}
+.income{
+  margin-top: 10rpx;
+}
+.income text{
+  margin-right: 20rpx;
+}
+.deduct_name{
+  width: 80rpx;
+}
+.deduct{
+  flex: 1;
+  border-bottom: 1px solid #eee;
+}

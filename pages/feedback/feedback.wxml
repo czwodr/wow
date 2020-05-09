@@ -1,0 +1,22 @@
+<view class="question">
+  <view class="title">
+    请选择您的问题类型
+  </view>
+  <van-radio-group value="{{ radio }}" bind:change="radioChange">
+    <van-cell-group>
+      <van-cell title="{{item.content}}" clickable data-name="{{item.id}}" bind:click="onClick" wx:for="{{question}}" wx:key="index">
+        <van-radio slot="right-icon" name="{{item.id}}" checked-color="#FB986E" icon-size="33rpx" />
+      </van-cell>
+    </van-cell-group>
+  </van-radio-group>
+  <view class="input">
+    <view class="title">
+      建议 *
+    </view>
+    <textarea placeholder="谢谢您的宝贵意见~" class="textarea" placeholder-style="color:#CDCDCD; font-size:28rpx;" value="{{textarea}}" bindinput="bindtextarea" cursor-spacing="0" />
+  </view>
+  <view class="button">
+    <van-button color="#FB986E" block round disabled="{{disabled}}" bind:click="feedback">提交</van-button>
+  </view>
+  <van-dialog id="van-dialog" />
+</view>

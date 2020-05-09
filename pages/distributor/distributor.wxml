@@ -1,0 +1,53 @@
+<view class='nav'>
+  <navBar title='金额明细' background='#30393C' color='#fff' back="{{true}}" iconTheme='white' bindback="handlerGobackClick"></navBar>
+</view>
+<view class="content">
+  <view class="cash_content" style="margin-bottom:20rpx;">
+    <view class="flex_y">
+      <view style="color:#b4b4b4">金额</view>
+      <view class="cash_money">￥{{teaminfo.amount}}</view>
+    </view>
+    <view class="cash_detail">
+      <view class="record_box">
+        <scroll-view class="scroll_record" scroll-y="{{true}}">
+          <view class="flex_y record_li" wx:for="{{currencyMoney}}" wx:key="index" wx:if="{{currencyMoney.length>0}}">
+            <view class="name">{{item.equipment_name}}</view>
+            <view class="timer">{{item.create_time}}</view>
+            <view class="price">{{item.price}}{{item.currency_type==2?'元':'币'}}</view>
+          </view>
+          <view class="flex_y record_li" wx:if="{{currencyMoney.length==0}}">
+            <view>
+              暂时没有记录
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+  <view class="cash_content">
+    <view class="flex_y">
+      <view style="color:#b4b4b4">金币</view>
+      <view class="cash_money">{{teaminfo.gold_coin}}金币</view>
+    </view>
+    <view class="cash_detail">
+      <view class="record_box">
+        <scroll-view class="scroll_record" scroll-y="{{true}}">
+          <view class="flex_y record_li" wx:for="{{currencyCoin}}" wx:key="index" wx:if="{{currencyCoin.length>0}}">
+            <view class="name">{{item.equipment_name}}</view>
+            <view class="timer">{{item.create_time}}</view>
+            <view class="price">{{item.price}}{{item.currency_type==2?'元':'币'}}</view>
+          </view>
+          <view class="flex_y record_li" wx:if="{{currencyCoin.length==0}}">
+            <view>
+              暂时没有记录
+            </view>
+          </view>
+        </scroll-view>
+        <view style="color:#b4b4b4;font-size:24rpx;margin-top:20rpx;">
+          提示：金币只做记录，具体分配需在游戏中进行
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="start" bindtap="hint" data-url="/pages/distributor-detail/distributor-detail" wx:if="{{identity==1}}">开始分配</view>
+</view>

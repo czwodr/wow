@@ -1,0 +1,44 @@
+<view class="main">
+  <view class="header flex_sb">
+    <view class="header_item flex-grow-1" wx:for="{{header_lsit}}" wx:key="index" bindtap="cut" data-index="{{index}}">
+      <view>{{item.name}}</view>
+      <view class="header_hint" wx:if="{{header_index == index}}"></view>
+    </view>
+  </view>
+  <view wx:if="{{header_index == 0}}" style="padding-top:100rpx;">
+    <view class="list" wx:if="{{recode.length > 0}}">
+      <view class="item flex_sb flex_y" wx:for="{{recode}}" wx:key="index">
+        <view>
+          <view>{{item.msg}}</view>
+          <view style="padding-top:10rpx;">{{item.create_time}}</view>
+        </view>
+        <view style="color:#C92036;">{{item.amount}}</view>
+      </view>
+    </view>
+    <view wx:else class="hint">暂无记录</view>
+  </view>
+  <view wx:if="{{header_index == 1}}" style="padding-top:100rpx;">
+    <view class="list" wx:if="{{add.length > 0}}">
+      <view class="item flex_sb flex_y" wx:for="{{add}}" wx:key="index">
+        <view>
+          <view>{{item.msg}}</view>
+          <view style="padding-top:10rpx;">{{item.create_time}}</view>
+        </view>
+        <view style="color:#C92036;">{{item.amount}}</view>
+      </view>
+    </view>
+    <view wx:else class="hint">暂无记录</view>
+  </view>
+  <view wx:if="{{header_index == 2}}" style="padding-top:100rpx;">
+    <view class="list" wx:if="{{lsoe.length > 0}}">
+      <view class="item flex_sb flex_y" wx:for="{{lsoe}}" wx:key="index">
+        <view>
+          <view>{{item.msg}}</view>
+          <view style="padding-top:10rpx;">{{item.create_time}}</view>
+        </view>
+        <view style="color:#C92036;">{{item.amount}}</view>
+      </view>
+    </view>
+    <view wx:else class="hint">暂无记录</view>
+  </view>
+</view>
